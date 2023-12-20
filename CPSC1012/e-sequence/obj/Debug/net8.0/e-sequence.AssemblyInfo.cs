@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("e-sequence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ef6490c72c786ce3704efa18f37bbc8e3bc206e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("e-sequence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("e-sequence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
