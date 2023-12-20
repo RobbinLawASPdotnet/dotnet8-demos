@@ -1,17 +1,12 @@
 ﻿// Arrays Demos
 
+// Demo-1-Arrays-Simple-Stormy
 Demo1();
+// Demo-2-Arrays with methods-ave-min-max-sort
 //Demo2();
+// Demo-3-Arrays vs Lists
 //Demo3();
-//Demo4();
-//Demo5();
-//Demo6();
-//Demo7();
-//Demo8();
-//Demo9();
-//Demo10();
-//Demo11();
-//Demo12();
+
 
 void Demo1()
 {
@@ -27,49 +22,3 @@ void Demo3()
 {
   
 }
-
-void Demo4()
-{
-  
-}
-
-void Demo5()
-{
-  
-}
-
-void Demo6()
-{
-  
-}
-
-void Demo7()
-{
-  
-}
-
-void Demo8()
-{
-  
-}
-
-void Demo9()
-{
-  
-}
-
-void Demo10()
-{
-  
-}
-
-void Demo11()
-{
-  
-}
-
-void Demo12()
-{
-  
-}
-

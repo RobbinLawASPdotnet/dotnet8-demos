@@ -1,75 +1,12 @@
 ﻿// Objects Demos
 
-Demo1();
-//Demo2();
-//Demo3();
-//Demo4();
-//Demo5();
-//Demo6();
-//Demo7();
-//Demo8();
-//Demo9();
-//Demo10();
-//Demo11();
-//Demo12();
-
-void Demo1()
-{
-  
-}
-
-void Demo2()
-{
-  
-}
-
-void Demo3()
-{
-  
-}
-
-void Demo4()
-{
-  
-}
-
-void Demo5()
-{
-  
-}
-
-void Demo6()
-{
-  
-}
-
-void Demo7()
-{
-  
-}
-
-void Demo8()
-{
-  
-}
-
-void Demo9()
-{
-  
-}
-
-void Demo10()
-{
-  
-}
-
-void Demo11()
-{
-  
-}
-
-void Demo12()
-{
-  
-}
-
+var demo1 = new Objects.Demo1();
+demo1.RunDemo("Demo1 - array of objects vs list of objects both using only fields");
+var demo2 = new Objects.Demo2();
+//demo2.RunDemo("Demo2 - list of objects using methods, and auto-implemented properties");
+var demo3 = new Objects.Demo3();
+//demo3.RunDemo("Demo3 - list of objects using methods, and fully-implemented properties");
+var demo4 = new Objects.Demo4();
+//demo4.RunDemo("Demo4 - writing to a csv file with list of objects, toString, and fully-implemented properties");
+var demo5 = new Objects.Demo5();
+//demo5.RunDemo("Demo5 - reading from a csv file with list of objects, tryParse, parse, and fully-implemented properties");

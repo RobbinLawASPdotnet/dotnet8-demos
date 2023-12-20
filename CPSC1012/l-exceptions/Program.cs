@@ -1,17 +1,11 @@
 ﻿// Exceptions Demos
 
+// 1-Try Catch Simple Demo
 Demo1();
+// 2-Try Catch Finally
 //Demo2();
+// 3-Try Catch Circle Area and Circumference
 //Demo3();
-//Demo4();
-//Demo5();
-//Demo6();
-//Demo7();
-//Demo8();
-//Demo9();
-//Demo10();
-//Demo11();
-//Demo12();
 
 void Demo1()
 {
@@ -164,49 +158,3 @@ void Demo3()
     return (2 * Math.PI * radius);
   }
 }
-
-void Demo4()
-{
-
-}
-
-void Demo5()
-{
-
-}
-
-void Demo6()
-{
-
-}
-
-void Demo7()
-{
-
-}
-
-void Demo8()
-{
-
-}
-
-void Demo9()
-{
-
-}
-
-void Demo10()
-{
-
-}
-
-void Demo11()
-{
-
-}
-
-void Demo12()
-{
-
-}
-

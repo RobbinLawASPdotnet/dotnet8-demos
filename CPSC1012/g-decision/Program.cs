@@ -1,17 +1,27 @@
 ﻿// Decision Demos
 
+// Demo-1-If, If Else, and If Else If Demo
 Demo1();
+// Demo-2-If Else: Pollution Level
 //Demo2();
+// Demo-3-Boolean Operands
 //Demo3();
+// Demo-4-If Else with Boolean: Student Pass or Fail
 //Demo4();
+// Demo-5-If Else If: Storm Level
 //Demo5();
+// Demo-6-If: Window Area Calculator
 //Demo6();
+// Demo-7-If, If Else: Leap Year
 //Demo7();
+// Demo-8-If Else If: Student Grade
 //Demo8();
+// Demo-9-If Else If compared with equivalent Switch Case
 //Demo9();
+// Demo-10-Switch Case: Pet Food
 //Demo10();
+// Demo-11-Switch Case: All Provinces Sales Tax Calculator
 //Demo11();
-//Demo12();
 
 void Demo1()
 {
@@ -280,34 +290,6 @@ void Demo10()
 }
 
 void Demo11()
-{
-  // Prompt the user to enter the name of a season.
-  Console.WriteLine("Enter the name of a season: ");
-  string season = Console.ReadLine()!.ToLower();
-  string spanish = "";
-  switch (season)
-  {
-    case "spring":
-      spanish = "La Primavera";
-      break;
-    case "summer":
-      spanish = "El Verano";
-      break;
-    case "autumn":
-    case "fall":
-      spanish = "El Otoño";
-      break;
-    case "winter":
-      spanish = "El Invierno";
-      break;
-    default:
-      spanish = "Incorrect Input";
-      break;
-  }
-  Console.WriteLine(spanish);
-}
-
-void Demo12()
 {
   Console.Write("Enter the Sale Total (before tax): ");
   double beforeTax = double.Parse(Console.ReadLine()!);

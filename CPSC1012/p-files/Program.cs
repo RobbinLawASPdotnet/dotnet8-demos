@@ -1,17 +1,14 @@
 ﻿// Files Demos
 
+// Demo-1-Writing to a file
 Demo1();
+// Demo-2-Reading from a file
 //Demo2();
+// Demo-3-Write and Read csv files with parallel arrays
 //Demo3();
+// Demo-4-File I/O using streams
 //Demo4();
-//Demo5();
-//Demo6();
-//Demo7();
-//Demo8();
-//Demo9();
-//Demo10();
-//Demo11();
-//Demo12();
+
 
 void Demo1()
 {
@@ -32,44 +29,3 @@ void Demo4()
 {
   
 }
-
-void Demo5()
-{
-  
-}
-
-void Demo6()
-{
-  
-}
-
-void Demo7()
-{
-  
-}
-
-void Demo8()
-{
-  
-}
-
-void Demo9()
-{
-  
-}
-
-void Demo10()
-{
-  
-}
-
-void Demo11()
-{
-  
-}
-
-void Demo12()
-{
-  
-}
-

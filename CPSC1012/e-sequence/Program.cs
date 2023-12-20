@@ -1,15 +1,26 @@
 ﻿// Sequence Demos
 
+// Demo-1-String Interpolation
 Demo1();
+// Demo-2-Escape Characters
 //Demo2();
+// Demo-3-Injecting Variable Values with String Interpolation
 //Demo3();
+// Demo-4-String Building with String Interpolation Formatting
 //Demo4();
+// Demo-5-More Complicated String Formatting
 //Demo5();
+// Demo-6-Math
 //Demo6();
+// Demo-7-ReadLine with Null Safety and Parse
 //Demo7();
+// Demo-8-Circle Circumference
 //Demo8();
+// Demo-9-Average Velocity
 //Demo9();
+// Demo-10-Simple Future Value
 //Demo10();
+// Demo-11-Calculating GST
 //Demo11();
 
 void Demo1()
