@@ -14,7 +14,7 @@
 void Demo1()
 {
   Console.Write($"Please enter any value between 1 and 4: ");
-  double myDouble = double.Parse(Console.ReadLine());
+  double myDouble = double.Parse(Console.ReadLine()!);
   if (myDouble > 3.0)
     Console.WriteLine($"The number is > 3");
   if (myDouble > 4.0)
@@ -43,11 +43,11 @@ void Demo2()
          level3,
          average;
   Console.Write("Enter First Pollution level reading (10 to 100): ");
-  level1 = double.Parse(Console.ReadLine());
+  level1 = double.Parse(Console.ReadLine()!);
   Console.Write("Enter Second Pollution level reading (10 to 100):");
-  level2 = double.Parse(Console.ReadLine());
+  level2 = double.Parse(Console.ReadLine()!);
   Console.Write("Enter Third Pollution level reading (10 to 100): ");
-  level3 = double.Parse(Console.ReadLine());
+  level3 = double.Parse(Console.ReadLine()!);
   average = (level1 + level2 + level3) / 3;
   // Check for hazardous condition.
   if (average >= CUTOFF)
@@ -60,7 +60,7 @@ void Demo3()
 {
   // Prompt for and read in an integer
   Console.Write("Enter an integer: ");
-  int num = int.Parse(Console.ReadLine());
+  int num = int.Parse(Console.ReadLine()!);
   // Display message if number is divisible by 2 and 3.
   if (num % 2 == 0 && num % 3 == 0)
   {
@@ -83,16 +83,16 @@ void Demo4()
   const double coreWeight = 25;
   const double advancedWeight = 25;
   Console.Write("Enter in users's In-Class Exercise score in %: ");
-  double exerciseScore = double.Parse(Console.ReadLine());
+  double exerciseScore = double.Parse(Console.ReadLine()!);
   double exWeightVal = exerciseWeight * (exerciseScore / 100);
   Console.Write("Enter in users's Quiz score in %: ");
-  double quizScore = double.Parse(Console.ReadLine());
+  double quizScore = double.Parse(Console.ReadLine()!);
   double quizWeightVal = quizWeight * (quizScore / 100);
   Console.Write("Enter in users's Core Portfolio score in %: ");
-  double coreScore = double.Parse(Console.ReadLine());
+  double coreScore = double.Parse(Console.ReadLine()!);
   double coreWeightVal = coreWeight * (coreScore / 100);
   Console.Write("Enter in users's Advanced Core Portfolio score in %: ");
-  double advancedScore = double.Parse(Console.ReadLine());
+  double advancedScore = double.Parse(Console.ReadLine()!);
   double advWeightVal = advancedWeight * (advancedScore / 100);
   double weightTotal = exWeightVal + quizWeightVal + coreWeightVal + advWeightVal;
   if (weightTotal >= 50 && (exerciseScore >= 50) && (quizScore >= 50) && (coreScore >= 50))
@@ -104,7 +104,7 @@ void Demo4()
 void Demo5()
 {
   Console.Write("Enter Wind speed in mph as an integer: ");
-  int speed = int.Parse(Console.ReadLine());
+  int speed = int.Parse(Console.ReadLine()!);
   if (speed >= 74 && speed <= 95)
     Console.WriteLine($"STORM LEVEL: HURRICANE --- Category 1");
   else if (speed >= 96 && speed <= 110)
@@ -126,7 +126,7 @@ void Demo6()
   const double MIN_HEIGHT = 0.75;
   string widthString, heightString;
   Console.Write("Give the width of the window : ");
-  widthString = Console.ReadLine();
+  widthString = Console.ReadLine()!;
   width = double.Parse(widthString);
   if (width < MIN_WIDTH)
   {
@@ -141,7 +141,7 @@ void Demo6()
     width = MAX_WIDTH;
   }
   Console.Write("Give the height of the window : ");
-  heightString = Console.ReadLine();
+  heightString = Console.ReadLine()!;
   height = double.Parse(heightString);
   if (height < MIN_HEIGHT)
   {
@@ -166,7 +166,7 @@ void Demo6()
 void Demo7()
 {
   Console.Write("Enter a year: ");
-  int year = int.Parse(Console.ReadLine());
+  int year = int.Parse(Console.ReadLine()!);
   bool isLeapYear = false;
   // (if year is divisible by 4 AND the year is not divisible by 100)
   // OR the year is divisible by 400.
@@ -182,7 +182,7 @@ void Demo8()
 {
   // Get user Input
   Console.WriteLine("Enter student's grade % (0-100):");
-  int grade = int.Parse(Console.ReadLine());
+  int grade = int.Parse(Console.ReadLine()!);
   // Store our letter grade in a string.
   string letterGrade;
   // Calculate our letter grade with If statements.
@@ -210,7 +210,7 @@ void Demo8()
 void Demo9()
 {
   Console.Write("Enter 1, 2, or 3: ");
-  int num1 = int.Parse(Console.ReadLine());
+  int num1 = int.Parse(Console.ReadLine()!);
 
   if (num1 == 1)
     Console.WriteLine("One");
@@ -248,9 +248,9 @@ void Demo10()
   Console.WriteLine("Our pet food is available in three grades.");
   Console.WriteLine("A, B, and C. Which do you want pricing for? ");
   //char foodGrade = char.Parse(Console.Read());
-  string foodGrade = Console.ReadLine().ToUpper();
+  string foodGrade = Console.ReadLine()!.ToUpper();
   Console.WriteLine("Please enter a char");
-  char foodGradeChar = char.Parse(Console.ReadLine());
+  char foodGradeChar = char.Parse(Console.ReadLine()!);
   switch (foodGradeChar)
   {
     case 'A':
@@ -281,7 +281,7 @@ void Demo11()
 {
   // Prompt the user to enter the name of a season.
   Console.WriteLine("Enter the name of a season: ");
-  string season = Console.ReadLine().ToLower();
+  string season = Console.ReadLine()!.ToLower();
   string spanish = "";
   switch (season)
   {
@@ -308,9 +308,9 @@ void Demo11()
 void Demo12()
 {
   Console.Write("Enter the Sale Total (before tax): ");
-  double beforeTax = double.Parse(Console.ReadLine());
+  double beforeTax = double.Parse(Console.ReadLine()!);
   Console.Write("Enter your province: ");
-  string provinceStr = Console.ReadLine();
+  string provinceStr = Console.ReadLine()!;
   double taxRate;
   switch (provinceStr.ToLower())
   {

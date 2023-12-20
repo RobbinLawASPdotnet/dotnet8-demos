@@ -1,0 +1,15 @@
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\bin\Debug\net8.0\g-decision.exe
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\bin\Debug\net8.0\g-decision.deps.json
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\bin\Debug\net8.0\g-decision.runtimeconfig.json
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\bin\Debug\net8.0\g-decision.dll
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\bin\Debug\net8.0\g-decision.pdb
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\g-decision.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\g-decision.AssemblyInfoInputs.cache
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\g-decision.AssemblyInfo.cs
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\g-decision.csproj.CoreCompileInputs.cache
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\g-decision.sourcelink.json
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\g-decision.dll
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\refint\g-decision.dll
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\g-decision.pdb
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\g-decision.genruntimeconfig.cache
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\g-decision\obj\Debug\net8.0\ref\g-decision.dll
