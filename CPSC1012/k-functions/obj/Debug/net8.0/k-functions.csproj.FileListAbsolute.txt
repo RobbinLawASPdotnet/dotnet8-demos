@@ -1,0 +1,15 @@
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\bin\Debug\net8.0\k-functions.exe
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\bin\Debug\net8.0\k-functions.deps.json
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\bin\Debug\net8.0\k-functions.runtimeconfig.json
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\bin\Debug\net8.0\k-functions.dll
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\bin\Debug\net8.0\k-functions.pdb
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\k-functions.GeneratedMSBuildEditorConfig.editorconfig
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\k-functions.AssemblyInfoInputs.cache
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\k-functions.AssemblyInfo.cs
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\k-functions.csproj.CoreCompileInputs.cache
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\k-functions.sourcelink.json
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\k-functions.dll
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\refint\k-functions.dll
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\k-functions.pdb
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\k-functions.genruntimeconfig.cache
+C:\DevAspdotnet\repos\dotnet8-demos\CPSC1012\k-functions\obj\Debug\net8.0\ref\k-functions.dll
