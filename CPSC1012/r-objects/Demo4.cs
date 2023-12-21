@@ -11,7 +11,7 @@ namespace Objects
 			try
 			{
 				Console.WriteLine($"{demoName} STARTED");
-				const string csvFileName = "StudentData.dat";
+				const string csvFileName = "StudentDataGood.dat";
 				List<StudentInfoWithFullProperties> students = new();
 				students.Add(new StudentInfoWithFullProperties("Charles", 55));
 				students.Add(new StudentInfoWithFullProperties("Jimmy", 45));

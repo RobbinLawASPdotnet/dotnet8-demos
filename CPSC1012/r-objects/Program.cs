@@ -7,6 +7,6 @@ var demo2 = new Objects.Demo2();
 var demo3 = new Objects.Demo3();
 //demo3.RunDemo("Demo3 - list of objects; full-props");
 var demo4 = new Objects.Demo4();
-//demo4.RunDemo("Demo4 - write csv file; list of objects; toString; full-props");
+demo4.RunDemo("Demo4 - write csv file; list of objects; toString; full-props");
 var demo5 = new Objects.Demo5();
 demo5.RunDemo("Demo5 - read csv file; list of objects; tryParse; full-props");
