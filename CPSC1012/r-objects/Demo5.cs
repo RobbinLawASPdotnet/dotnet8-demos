@@ -11,7 +11,7 @@ namespace Objects
 			try
 			{
 				Console.WriteLine($"{demoName} STARTED");
-				const string csvFileName = "StudentData.dat";
+				const string csvFileName = "StudentDataBad.dat";
 				List<StudentInfoWithFullProperties> students = new();
 				//read the csv file and each line becomes a new student added to the list.
 				string[] csvFileInput = File.ReadAllLines(csvFileName);
