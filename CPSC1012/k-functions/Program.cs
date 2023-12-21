@@ -51,7 +51,7 @@ void Demo2()
   int num2 = getNum2("Enter a integer number", 0, 1000);
   Console.WriteLine($"The entered number is: {num2}");
 
-  private double getValue(
+  double getValue(
     string prompt, // prompt for the user 
     double low,    // lowest allowed value
     double high    // highest allowed value
@@ -67,7 +67,7 @@ void Demo2()
     return result;
   }
 
-  private int getNum(string prompt, int low, int high)
+  int getNum(string prompt, int low, int high)
   {
     int num = low - 1;
     while ((num < low) || (num > high))
@@ -79,7 +79,7 @@ void Demo2()
     return num;
   }
 
-  private int getNum1(string prompt, int low, int high)
+  int getNum1(string prompt, int low, int high)
   {
     int num = low - 1;
     bool invalidInput = true;
@@ -95,7 +95,7 @@ void Demo2()
     return num;
   }
 
-  private int getNum2(string prompt, int low, int high)
+  int getNum2(string prompt, int low, int high)
   {
     int num = low - 1;
     bool inValidInput = true;
@@ -121,7 +121,7 @@ void Demo3()
   Console.WriteLine($"The Circle Area is: {circleArea(radius):n2}");
   Console.WriteLine($"The Circle Circumference is: {circleCircumference(radius):n2}");
 
-  private double getNumber(string prompt, double low, double high)
+  double getNumber(string prompt, double low, double high)
   {
     double num = 0;
     bool invalidInput = true;
@@ -136,11 +136,11 @@ void Demo3()
     }
     return num;
   }
-  private double circleArea(double radius)
+  double circleArea(double radius)
   {
     return (Math.PI * radius * radius);
   }
-  private double circleCircumference(double radius)
+  double circleCircumference(double radius)
   {
     return (2 * Math.PI * radius);
   }
@@ -162,7 +162,7 @@ void Demo4()
   intercept = compute_intercept(x1, y1, slope);
   Console.WriteLine($"The slope is {slope}, and the intercept is {intercept}");
 
-  private double compute_slope(int x1, int y1, int x2, int y2)
+  double compute_slope(int x1, int y1, int x2, int y2)
   {
     double slope;
     slope = (y2 - y1) / (x2 - x1);
@@ -170,7 +170,7 @@ void Demo4()
   }
 
   /* Calculates the Y intercept of the line. */
-  private double compute_intercept(int x1, int y1, double slope)
+  double compute_intercept(int x1, int y1, double slope)
   {
     double intercept;
     intercept = y1 - slope * x1;

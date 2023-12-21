@@ -14,7 +14,7 @@ void Demo1()
   int myInt2 = GetInt2($"GetInt2: Enter a + integer value: ");
   Console.WriteLine($"Congrats, you entered {myInt2}");
 
-  private int GetInt1(String msg)
+  int GetInt1(String msg)
   {
     bool inValidInput = true;
     int num = 0;
@@ -30,7 +30,7 @@ void Demo1()
     return num;
   }
 
-  private int GetInt2(String msg)
+  int GetInt2(String msg)
   {
     bool inValidInput = true;
     int num = 0;
@@ -64,10 +64,10 @@ void Demo2()
   }
   catch (Exception ex)
   {
-    Console.WriteLine($"Exception in {demoName}: {ex.Message}");
+    Console.WriteLine($"Exception {ex.Message}");
   }
 
-  private string MyMethod(string name)
+  string MyMethod(string name)
   {
     try
     {
@@ -121,10 +121,10 @@ void Demo3()
   }
   catch (Exception ex)
   {
-    Console.WriteLine($"Exception in {demoName}: {ex.Message}");
+    Console.WriteLine($"Exception: {ex.Message}");
   }
 
-  private double getNumber(string prompt, double low, double high)
+  double getNumber(string prompt, double low, double high)
   {
     double num = 0.0;
     bool invalidInput = true;
@@ -147,13 +147,13 @@ void Demo3()
     }
     return num;
   }
-  private double circleArea(double radius)
+  double circleArea(double radius)
   {
     double result = Math.PI * radius * radius;
     return result;
     // return (Math.PI * radius * radius);
   }
-  private double circleCircumference(double radius)
+  double circleCircumference(double radius)
   {
     return (2 * Math.PI * radius);
   }
