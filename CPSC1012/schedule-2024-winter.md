@@ -8,48 +8,23 @@
 
 ## Calendar
 
-- All assessments are due on Monday of a week at 11:59 PM
+- All assessments are due on Monday of the week at 11:59 PM
 
-|Week|Due|Day1|Day2|Day3|
+|Week|Assessment|Day1|Day2|Day3|
 |:-:|:-:|:-:|:-:|:-:|
 |1-J08||Setup/Prob-Solve|Setup/Prob-Solve|Setup/Prob-Solve|
-|2-J15|L1-Prob-Solve|Sequence|Sequence|Sequence|
-|3-J22|L2-Sequence|Sequence|Sequence|Sequence|
-|4-J29|Q1-P-Solve/Seq; A1-P-Solve/Seq|Decision|Decision|Decision|
-|5-F05|L3-Decision|Loops|Loops|Loops|
-|6-F12|L4-Loops|Loops|Loops|Loops|
+|2-J15|L1-Prob-Solve (2%)|Sequence|Sequence|Sequence|
+|3-J22|L2-Sequence (4%)|Sequence|Sequence|Sequence|
+|4-J29|<p>Q1-Prob-Solve/Sequence (4%)</p> <p>A1-Prob-Solve/Sequence (5%)</p>|Decision|Decision|Decision|
+|5-F05|L3-Decision (4%)|Loops|Loops|Loops|
+|6-F12|L4-Loops (4%)|Loops|Loops|Loops|
 |F19|||||
-|7-F26|Q2-Decisions/Loops A2-Decisions|Functions|Functions|Functions|
-|8-M04|L6-Functions|Exceptions|Exceptions|Exceptions|
+|7-F26|<p>Q2-Decisions/Loops (4%)</p> <p>A2-Decisions (10%)</p>|Functions|Functions|Functions|
+|8-M04|L6-Functions (4%)|Exceptions|Exceptions|Exceptions|
 |9-M11||Arrays|Arrays|Arrays|
-|10-M18|L5-Arrays|Files|Files|Files|
-|11-M25|L7-Files|Files|Files|Files|
-|12-A01|Q3 Q4 A3|OOP|OOP|OOP|
+|10-M18|L5-Arrays (4%)|Files|Files|Files|
+|11-M25|L7-Files (4%)|Files|Files|Files|
+|12-A01|<p>Q3-Arrays (4%)</p> <p>Q4-Functions/Files (4%)</p> <p>A3-Functions/Exceptions/Arrays/Files (15%)</p>|OOP|OOP|OOP|
 |13-A08||OOP|OOP|OOP|
-|14-A15|L8-OOP|OOP|OOP|OOP|
-|15-A22|Q5 A4||||
-
----
-
-## Assessment Details
-
-||Description|%|
-|:-:|:-:|:-:|
-|Assignment-1|Problem-Solving/Sequence|5|
-|Assignment-2|Decisions|10|
-|Assignment-3|Functions/Exceptions/Arrays/Files|15|
-|Assignment-4|Object-Oriented-Programming|20|
-|Quiz-1|Problem-Solving/Sequence|4|
-|Quiz-2|Decisions/Loops|4|
-|Quiz-3|Arrays|4|
-|Quiz-4|Files/Functions|4|
-|Quiz-5|Object-Oriented-Programming|4|
-|Lesson-1|Problem-Solving|2|
-|Lesson-2|Sequence|2|
-|Lesson-3|Decisions|3|
-|Lesson-4|Loops|3|
-|Lesson-5|Arrays|5|
-|Lesson-6|Functions|5|
-|Lesson-7|Files|5|
-|Lesson-8|Object-Oriented-Programming|5|
-|Total||100|
+|14-A15|L8-OOP (4%)|OOP|OOP|OOP|
+|15-A22|<p>Q5-OOP (4%)</p> <p>A4-OOP (20%)</p>|OOP|OOP|OOP|
