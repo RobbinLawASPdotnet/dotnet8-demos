@@ -40,6 +40,13 @@
 
 ---
 
+## Download dotnet8 software dev kit
+
+- [dotnet8 sdk download](https://dotnet.microsoft.com/en-us/download)
+- Go to the link above and download the dotnet8 sdk.
+
+---
+
 ## Test Drive Tool Chain
 
 - Within VSCode close all folders, then open `C:\CPSC1012`.
