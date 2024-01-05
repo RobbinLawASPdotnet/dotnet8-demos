@@ -42,8 +42,8 @@
 
 ## Test Drive Tool Chain
 
-- From VSCode close all folders, then open `C:\CPSC1012`.
-- Test drive our tools. When within VS Code go to `View/CommandPallet/.net: New Project`, choose `Console app`, name it `ConsoleApp1` and store it in `C:\CPSC1012`.
+- Within VSCode close all folders, then open `C:\CPSC1012`.
+- Within VSCode go to `View/CommandPallet/.net: New Project`, choose `Console app`, name it `ConsoleApp1` and store it in `C:\CPSC1012`.
 - Right mouse click on the `project` name. Default is `ConsoleApp1`.
 - From the context sensitive menu choose `Open in Integrated Terminal`.
 - From the command prompt type `dotnet build`.
