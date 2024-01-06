@@ -2,7 +2,7 @@
 
 ## Links
 
-- [Link to my demos repo](https://github.com/RobbinLawJavaScript/javascript-demos.git)
+- [Link to my demos repo](https://github.com/RobbinLawASPdotnet/dotnet8-demos)
 
 ---
 
