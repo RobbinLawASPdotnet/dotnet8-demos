@@ -25,7 +25,7 @@
 
 ## Clone My Demos to Your Machine
 
-- [My Demos Repo on GitHub](https://github.com/RobbinLawFlutter/flutter-demos-all)
+- [My Demos Repo on GitHub](https://github.com/RobbinLawASPdotnet/dotnet8-demos.git)
 - From the link above, clone my repo to your machine.
   - from the green dropdown copy the link to your clipboard.
   - in VSCode run the command `View/CommandPallet/Git:Clone`
