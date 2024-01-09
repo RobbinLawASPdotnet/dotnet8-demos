@@ -8,7 +8,7 @@
   
 ----
 
-## Download Visual Studio Code & the Flutter/Dart Extension
+## Download Visual Studio Code
 
 - [Visual Studio Code Website](https://code.visualstudio.com){:target="_blank"}
 - Download Visual Studio Code if you do not already have it on your machine.

@@ -1,13 +1,13 @@
 ﻿// Sequence Demos
 
 // Demo-1-String Interpolation
-Demo1();
+//Demo1();
 // Demo-2-Escape Characters
 //Demo2();
 // Demo-3-Injecting Variable Values with String Interpolation
 //Demo3();
 // Demo-4-String Building with String Interpolation Formatting
-//Demo4();
+Demo4();
 // Demo-5-More Complicated String Formatting
 //Demo5();
 // Demo-6-Math
@@ -30,7 +30,7 @@ void Demo1()
   //A string with the $ in front means use string interpolation
   //It is the new way. We will use this all the time.
   Console.WriteLine($"Hello Everybody");
-  Console.WriteLine($"");
+  Console.WriteLine($"ppppppooooo");
 }
 
 void Demo2()
@@ -68,6 +68,8 @@ void Demo3()
   Console.WriteLine($"{foo}, {bar}");
   Console.WriteLine($"");
 }
+
+// https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
 
 void Demo4()
 {
