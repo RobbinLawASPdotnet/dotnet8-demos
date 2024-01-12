@@ -7,9 +7,9 @@
 // Demo-3-Injecting Variable Values with String Interpolation
 //Demo3();
 // Demo-4-Math
-Demo4();
+//Demo4();
 // Demo-5-ReadLine with Null Safety and Parse
-//Demo5();
+Demo5();
 // Demo-6-Circle Circumference
 //Demo6();
 // Demo-7-Average Velocity
@@ -58,9 +58,11 @@ void Demo3()
 {
   //explicitly typed variables
   string myString = "Robbin";
-  int myInt = 15;
+  int myInt;
   double myDouble = 6.66;
   bool myBool = true;
+  myInt = 17;
+  myInt = 34;
   //With string interpolation we can inject variables by placing
   //them in between {}.
   Console.WriteLine($"{myString}, {myInt}, {myDouble}, {myBool}");
@@ -68,7 +70,7 @@ void Demo3()
   var foo = "Apple";
   var bar = 15;
   Console.WriteLine($"{foo}, {bar}");
-  Console.WriteLine($"");
+  Console.WriteLine($"the end");
 }
 
 // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
@@ -97,9 +99,9 @@ void Demo4()
   myIntAnswer = (int)myDouble1 % myInt2; //gives the remainder of division as the double is cast to an int
   Console.WriteLine($"The remainder is: {myIntAnswer}");
 
-  myDoubleAnswer = myDouble1 / myDouble2; //only gives the whole part of division as the double is cast to an int
+  myDoubleAnswer = myDouble1 / myDouble2;
   Console.WriteLine($"The 5th answer is: {myDoubleAnswer}");
-  myDoubleAnswer = myDouble2 / myDouble1; //only gives the whole part of division as the double is cast to an int
+  myDoubleAnswer = myDouble2 / myDouble1;
   Console.WriteLine($"The 6th answer is: {myDoubleAnswer}");
   Console.WriteLine($"The 6th answer truncated to 2 decimals is: {myDoubleAnswer:n2}");
 
