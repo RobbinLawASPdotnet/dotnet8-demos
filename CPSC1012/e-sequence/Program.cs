@@ -7,9 +7,9 @@
 // Demo-3-Injecting Variable Values with String Interpolation
 //Demo3();
 // Demo-4-Math
-//Demo4();
+Demo4();
 // Demo-5-ReadLine with Null Safety and Parse
-Demo5();
+//Demo5();
 // Demo-6-Circle Circumference
 //Demo6();
 // Demo-7-Average Velocity
@@ -62,13 +62,17 @@ void Demo3()
   double myDouble = 6.66;
   bool myBool = true;
   myInt = 17;
-  myInt = 34;
+  // We can concatenate a string and variable without string
+  // interpolation.
+  Console.WriteLine("Hey " + myString);
+  Console.WriteLine("Law, " + myString);
   //With string interpolation we can inject variables by placing
   //them in between {}.
   Console.WriteLine($"{myString}, {myInt}, {myDouble}, {myBool}");
   //implicitly typed variables
   var foo = "Apple";
   var bar = 15;
+  Console.WriteLine(foo + ", " + bar);
   Console.WriteLine($"{foo}, {bar}");
   Console.WriteLine($"the end");
 }
@@ -85,19 +89,25 @@ void Demo4()
   int myIntAnswer;
   double myDoubleAnswer;
 
-  myIntAnswer = myInt1 / myInt2; //only gives the whole part of division
+  // This integer division only gives the whole part of division.
+  myIntAnswer = myInt1 / myInt2;
   Console.WriteLine($"The 1st answer is: {myIntAnswer}");
-  myIntAnswer = myInt2 / myInt1; //only gives the whole part of division
+
+  // This also only gives the whole part of division
+  myIntAnswer = myInt2 / myInt1;
   Console.WriteLine($"The 2nd answer is: {myIntAnswer}");
-  myIntAnswer = myInt1 % myInt2; //gives the remainder of division
+
+  // this gives the remainder of integer division
+  myIntAnswer = myInt1 % myInt2;
   Console.WriteLine($"The remainder is: {myIntAnswer}");
 
-  myIntAnswer = myInt1 / (int)myDouble2; //only gives the whole part of division as the double is cast to an int
-  Console.WriteLine($"The 3rd answer is: {myIntAnswer}");
-  myIntAnswer = (int)myDouble2 / myInt1; //only gives the whole part of division as the double is cast to an int
-  Console.WriteLine($"The 4th answer is: {myIntAnswer}");
-  myIntAnswer = (int)myDouble1 % myInt2; //gives the remainder of division as the double is cast to an int
-  Console.WriteLine($"The remainder is: {myIntAnswer}");
+  // Here the integer is changed into a double
+  myDoubleAnswer = myInt1 / myDouble2; 
+  Console.WriteLine($"The 3rd answer is: {myDoubleAnswer}");
+
+  // Here as well the integer is changed into a double
+  myDoubleAnswer = myDouble2 / myInt1;
+  Console.WriteLine($"The 4th answer is: {myDoubleAnswer}");
 
   myDoubleAnswer = myDouble1 / myDouble2;
   Console.WriteLine($"The 5th answer is: {myDoubleAnswer}");
@@ -105,16 +115,18 @@ void Demo4()
   Console.WriteLine($"The 6th answer is: {myDoubleAnswer}");
   Console.WriteLine($"The 6th answer truncated to 2 decimals is: {myDoubleAnswer:n2}");
 
+  // Multiplication and Division precede Add and Subtract
+  // when at the same level left to right so here Multiply first,
+  // then Divide, then Add.
   myDoubleAnswer = myDouble1 + myDouble2 * myDouble3 / myDouble1;
-  //multiplication and Division precede Add and Subtract
-  //when at the same level left to right so here Multiply first,
-  //then Divide, then Add
   Console.WriteLine($"The 7th answer is:  {myDoubleAnswer}");
 
+  // Any math done in the parentheses is done first, so here
+  // the Addition is done, then 
+  // Multiplication and Division precede Add and Subtract
+  // when at the same level left to right so here Multiply first,
+  // then Divide.
   myDoubleAnswer = (myDouble1 + myDouble2) * myDouble3 / myDouble1;
-  //multiplication and Division precede Add and Subtract
-  //when at the same level left to right so here Multiply first,
-  //then Divide, then Add
   Console.WriteLine($"The 8th answer is:  {myDoubleAnswer:n5}");
 }
 
