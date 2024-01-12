@@ -3,6 +3,7 @@
 ## Links
 
 - [Link to my demos repo](https://github.com/RobbinLawASPdotnet/dotnet8-demos)
+- [Link to assignment specs](https://github.com/CPSC-1012/Winter-2024-Assignments)
 
 ---
 
