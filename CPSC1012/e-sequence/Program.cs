@@ -5,9 +5,9 @@
 // Demo-2-Escape Characters
 //Demo2();
 // Demo-3-Injecting Variable Values with String Interpolation
-//Demo3();
+Demo3();
 // Demo-4-Math
-Demo4();
+//Demo4();
 // Demo-5-ReadLine with Null Safety and Parse
 //Demo5();
 // Demo-6-Circle Circumference
@@ -122,10 +122,7 @@ void Demo4()
   Console.WriteLine($"The 7th answer is:  {myDoubleAnswer}");
 
   // Any math done in the parentheses is done first, so here
-  // the Addition is done, then 
-  // Multiplication and Division precede Add and Subtract
-  // when at the same level left to right so here Multiply first,
-  // then Divide.
+  // the Addition is done, then Multiply, then Divide.
   myDoubleAnswer = (myDouble1 + myDouble2) * myDouble3 / myDouble1;
   Console.WriteLine($"The 8th answer is:  {myDoubleAnswer:n5}");
 }
@@ -159,10 +156,14 @@ void Demo6()
   double myRadius;
   double myPi = Math.PI;
   double myCircumference;
+  double myArea;
   Console.Write("Enter the Radius as a double: ");
   myRadius = double.Parse(Console.ReadLine()!);
+  // Circumference = 2*pi*r
   myCircumference = 2.0 * myPi * myRadius;
-  Console.WriteLine($"The Radius was {myRadius:n} and its Circumference is {myCircumference:n}");
+  // Area = pi*rSquared
+  myArea = myPi * Math.Pow(myRadius, 2);
+  Console.WriteLine($"The Radius was {myRadius:n} and its Circumference is {myCircumference:n} and its Area is {myArea:n}");
 }
 
 void Demo7()
