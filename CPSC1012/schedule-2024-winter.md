@@ -28,4 +28,4 @@
 |12-A01|Q3-Arrays (4%)<br>A3-Functions/Exceptions/Arrays/Files (15%)|OOP|OOP|OOP|
 |13-A08|Q4-Functions/Files (4%)|OOP|OOP|OOP|
 |14-A15|L8-OOP (5%)|OOP|OOP|OOP|
-|15-A22|Q5-OOP (4%)<br>A4-OOP (20%)|OOP|OOP|OOP|
+|15-A22|Q5-OOP (4%)<br>A4-OOP (20%)|
