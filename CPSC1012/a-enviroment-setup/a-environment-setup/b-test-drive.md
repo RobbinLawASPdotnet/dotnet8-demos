@@ -1,3 +1,5 @@
+<base target="_blank">
+
 # Using VSCode to create/run a C# program
 
 ## Links
