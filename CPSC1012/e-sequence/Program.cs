@@ -72,11 +72,14 @@ void Demo3()
   //implicitly typed variables
   var foo = "Apple";
   var bar = 15;
+  // Without string interpolation
   Console.WriteLine(foo + ", " + bar);
+  // With string interpolation
   Console.WriteLine($"{foo}, {bar}");
   Console.WriteLine($"the end");
 }
 
+// More on string interpolation
 // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/interpolated
 
 void Demo4()
@@ -127,6 +130,9 @@ void Demo4()
   Console.WriteLine($"The 8th answer is:  {myDoubleAnswer:n5}");
 }
 
+// If we have <!-- <Nullable>enable</Nullable> --> commented out
+// in the .csproj file then we do NOT have to worry about
+// null safety with ReadLine().
 
 // https://learn.microsoft.com/en-us/training/modules/csharp-null-safety/
 // https://www.reddit.com/r/csharp/comments/tae9al/how_can_i_fix_this/
@@ -134,17 +140,23 @@ void Demo4()
 void Demo5()
 {
   string name;
+  string ageString;
   int age;
   double annualPay;
 
   Console.WriteLine("Enter your name: ");
-  name = Console.ReadLine()!;
+  name = Console.ReadLine();
 
+  // Anytime any value is read in with ReadLine()
+  // the value will come back as a "string".
   Console.WriteLine("Enter your age:");
-  age = int.Parse(Console.ReadLine()!);
+  ageString = Console.ReadLine();
+  age = int.Parse(ageString);
 
+  // We can combine the two functions ReadLine() and double.Parse()
+  // into one statement.
   Console.WriteLine("Enter your annual salary:");
-  annualPay = double.Parse(Console.ReadLine()!);
+  annualPay = double.Parse(Console.ReadLine());
 
   // The :c means output as a currency value.
   Console.WriteLine($"My name is {name}, my age is {age} " +
@@ -158,10 +170,10 @@ void Demo6()
   double myCircumference;
   double myArea;
   Console.Write("Enter the Radius as a double: ");
-  myRadius = double.Parse(Console.ReadLine()!);
+  myRadius = double.Parse(Console.ReadLine());
   // Circumference = 2*pi*r
   myCircumference = 2.0 * myPi * myRadius;
-  // Area = pi*rSquared
+  // Area = pi*r^2 = pi*r*r
   myArea = myPi * Math.Pow(myRadius, 2);
   Console.WriteLine($"The Radius was {myRadius:n} and its Circumference is {myCircumference:n} and its Area is {myArea:n}");
 }
@@ -169,27 +181,37 @@ void Demo6()
 void Demo7()
 {
   double x1, x2, t1, t2, avgVel;
-  Console.WriteLine("Enter points x1 and x2: ");
-  x1 = double.Parse(Console.ReadLine()!);
-  x2 = double.Parse(Console.ReadLine()!);
-  Console.WriteLine("Enter times t1 and t2: ");
-  t1 = double.Parse(Console.ReadLine()!);
-  t2 = double.Parse(Console.ReadLine()!);
+  Console.WriteLine("Enter points x1 and x2: as doubles");
+  x1 = double.Parse(Console.ReadLine());
+  x2 = double.Parse(Console.ReadLine());
+  Console.WriteLine("Enter times t1 and t2: as doubles");
+  t1 = double.Parse(Console.ReadLine());
+  t2 = double.Parse(Console.ReadLine());
   avgVel = (x2 - x1) / (t2 - t1);
   Console.WriteLine($"The average velocity is: {avgVel}");
 }
 
+/*
+Where:
+FV = Future value
+I = Initial investment amount
+R = Monthly interest rate
+T = Number of months to leave invested
+
+FV = I x (1 + R)^T
+*/
+
 void Demo8()
 {
   Console.WriteLine("Enter Investment Amount:");
-  double investAmt = double.Parse(Console.ReadLine()!);
+  double investAmt = double.Parse(Console.ReadLine());
   Console.WriteLine("Enter annual interest rate in percentage:");
-  double interestRate = double.Parse(Console.ReadLine()!);
+  double interestRate = double.Parse(Console.ReadLine());
   double monthlyInterest = interestRate / 100 / 12;
   Console.WriteLine("Enter Number of years:");
-  int numYears = int.Parse(Console.ReadLine()!);
+  int numYears = int.Parse(Console.ReadLine());
   double futureVal = investAmt * Math.Pow(1 + monthlyInterest, numYears * 12);
-  Console.WriteLine($"Future Value is {futureVal:C}");
+  Console.WriteLine($"Future Value is {futureVal:c}");
 }
 
 void Demo9()
@@ -207,24 +229,25 @@ void Demo9()
   double totalTax;
   double totalSale;
   Console.WriteLine("Enter the item price as a double: ");
-  itemPrice = double.Parse(Console.ReadLine()!);
+  itemPrice = double.Parse(Console.ReadLine());
   Console.WriteLine("Enter the Number of Items as an integer: ");
-  numItems = int.Parse(Console.ReadLine()!);
+  numItems = int.Parse(Console.ReadLine());
   beforeTax = itemPrice * numItems;
-  Console.WriteLine($"Purchase Total (before Tax): {beforeTax:C}");
+  Console.WriteLine($"Purchase Total (before Tax): {beforeTax:c}");
   // Calculate Tax
   totalProvTax = beforeTax * provTaxRate;
-  Console.WriteLine($"Total Provincial Tax: {totalProvTax:C}");
+  Console.WriteLine($"Total Provincial Tax: {totalProvTax:c}");
   totalFedTax = beforeTax * fedTaxRate;
-  Console.WriteLine($"Total Federal Tax: {totalFedTax:C}");
+  Console.WriteLine($"Total Federal Tax: {totalFedTax:c}");
   totalTax = totalProvTax + totalFedTax;
-  Console.WriteLine($"Total Tax Amount: {totalTax:C}");
+  Console.WriteLine($"Total Tax Amount: {totalTax:c}");
   totalSale = beforeTax + totalTax;
-  Console.WriteLine($"Total Sale price: {totalSale:C}");
+  Console.WriteLine($"Total Sale price: {totalSale:c}");
 }
 
 // Demo NOT USED as string interpolation formatting is not
 // required now.
+
 void Demo10()
 {
   string name = "Lamp";
@@ -263,6 +286,7 @@ void Demo10()
 
 // Demo NOT USED as string interpolation formatting is not
 // required now.
+
 void Demo11()
 {
   int hamburgerNumber = 2;
