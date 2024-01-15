@@ -4,11 +4,11 @@
 //Demo1();
 // Demo-2-Escape Characters
 //Demo2();
-// Demo-3-Injecting Variable Values with String Interpolation
+// Demo-3-Concatenate strings & Injecting Variable Values with String Interpolation
 Demo3();
 // Demo-4-Math
 //Demo4();
-// Demo-5-ReadLine with Null Safety and Parse
+// Demo-5-ReadLine with Parse
 //Demo5();
 // Demo-6-Circle Circumference
 //Demo6();
@@ -56,7 +56,7 @@ void Demo2()
 
 void Demo3()
 {
-  //explicitly typed variables
+  // explicitly typed variables
   string myString = "Robbin";
   int myInt;
   double myDouble = 6.66;
@@ -66,10 +66,10 @@ void Demo3()
   // interpolation.
   Console.WriteLine("Hey " + myString);
   Console.WriteLine("Law, " + myString);
-  //With string interpolation we can inject variables by placing
-  //them in between {}.
+  // With string interpolation we can inject variables by placing
+  // them in between {}.
   Console.WriteLine($"{myString}, {myInt}, {myDouble}, {myBool}");
-  //implicitly typed variables
+  // implicitly typed variables
   var foo = "Apple";
   var bar = 15;
   // Without string interpolation
@@ -104,7 +104,10 @@ void Demo4()
   myIntAnswer = myInt1 % myInt2;
   Console.WriteLine($"The remainder is: {myIntAnswer}");
 
-  // Here the integer is changed into a double
+  // Whenever both a double and integer are involved
+  // in a math expression, the integer is changed into
+  // a double before the calculation begins, and
+  // a double is returned from the calculation.
   myDoubleAnswer = myInt1 / myDouble2; 
   Console.WriteLine($"The 3rd answer is: {myDoubleAnswer}");
 
@@ -124,7 +127,7 @@ void Demo4()
   myDoubleAnswer = myDouble1 + myDouble2 * myDouble3 / myDouble1;
   Console.WriteLine($"The 7th answer is:  {myDoubleAnswer}");
 
-  // Any math done in the parentheses is done first, so here
+  // Any math done in parentheses is done first, so here
   // the Addition is done, then Multiply, then Divide.
   myDoubleAnswer = (myDouble1 + myDouble2) * myDouble3 / myDouble1;
   Console.WriteLine($"The 8th answer is:  {myDoubleAnswer:n5}");
