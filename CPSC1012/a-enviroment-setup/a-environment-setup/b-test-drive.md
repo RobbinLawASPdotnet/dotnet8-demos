@@ -45,10 +45,13 @@ The resulting output should be `Hello, World!`.
 ```csharp
 <!-- <Nullable>enable</Nullable> -->
 ```
-- Right mouse click on the `project` name, default is `ConsoleApp1`.
-- From the context sensitive menu choose `Open in Integrated Terminal`.
-- From the terminal when your working directory is `ConsoleApp1` type the following commands:
+
+- From within VSCode start a terminal.
+  - From the top menu choose `Terminal/New Terminal`.
+  - You may have to press the `...` to see the `Terminal` option.
+- From the terminal type the following commands:
 ```csharp
+cd C:\CPSC1012\ConsoleApp1
 dotnet build
 dotnet run
 ```
