@@ -5,7 +5,7 @@
 // Demo-2-Escape Characters
 //Demo2();
 // Demo-3-Concatenate strings & Injecting Variable Values with String Interpolation
-Demo3();
+//Demo3();
 // Demo-4-Math
 //Demo4();
 // Demo-5-ReadLine with Parse
@@ -15,7 +15,7 @@ Demo3();
 // Demo-7-Average Velocity
 //Demo7();
 // Demo-8-Simple Future Value
-//Demo8();
+Demo8();
 // Demo-9-Calculating GST
 //Demo9();
 // Demo-10-String Building with String Interpolation Formatting
@@ -69,6 +69,7 @@ void Demo3()
   // With string interpolation we can inject variables by placing
   // them in between {}.
   Console.WriteLine($"{myString}, {myInt}, {myDouble}, {myBool}");
+  
   // implicitly typed variables
   var foo = "Apple";
   var bar = 15;
@@ -154,6 +155,7 @@ void Demo5()
   // the value will come back as a "string".
   Console.WriteLine("Enter your age:");
   ageString = Console.ReadLine();
+  Console.WriteLine("ageString:" + ageString);
   age = int.Parse(ageString);
 
   // We can combine the two functions ReadLine() and double.Parse()
@@ -191,14 +193,14 @@ void Demo7()
   t1 = double.Parse(Console.ReadLine());
   t2 = double.Parse(Console.ReadLine());
   avgVel = (x2 - x1) / (t2 - t1);
-  Console.WriteLine($"The average velocity is: {avgVel}");
+  Console.WriteLine($"The average velocity is: {avgVel:n4}");
 }
 
 /*
 Where:
 FV = Future value
 I = Initial investment amount
-R = Monthly interest rate
+R = Monthly interest rate as a decimal value not %
 T = Number of months to leave invested
 
 FV = I x (1 + R)^T
