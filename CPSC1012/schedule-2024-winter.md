@@ -15,7 +15,7 @@
 |:-:|:-:|:-:|:-:|:-:|
 |1-J08||Setup/Prob-Solve|Setup/Prob-Solve|Setup/Prob-Solve|
 |2-J15|L1-Prob-Solve (2%)|Sequence|Sequence|Sequence|
-|3-J22|L2-Sequence (2%)|Sequence|Sequence|Sequence|
+|3-J22|L2-Sequence (2%)|Decision|Decision|Decision|
 |4-J29|Q1-Prob-Solve/Sequence (4%)<br>A1-Prob-Solve/Sequence (5%)|Decision|Decision|Decision|
 |5-F05|L3-Decision (3%)|Loops|Loops|Loops|
 |6-F12|L4-Loops (3%)|Loops|Loops|Loops|
