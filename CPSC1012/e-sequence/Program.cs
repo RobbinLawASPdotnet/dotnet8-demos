@@ -13,9 +13,10 @@
 // Demo-6-Circle Circumference
 //Demo6();
 // Demo-7-Average Velocity
-//Demo7();
-// Demo-8-Simple Future Value
-Demo8();
+Demo7();
+// Demo-8-Simple Future Value using compounding interest on a
+// monthly basis
+//Demo8();
 // Demo-9-Calculating GST
 //Demo9();
 // Demo-10-String Building with String Interpolation Formatting
@@ -186,17 +187,20 @@ void Demo6()
 void Demo7()
 {
   double x1, x2, t1, t2, avgVel;
-  Console.WriteLine("Enter points x1 and x2: as doubles");
+  Console.WriteLine("Enter point x1 as a double");
   x1 = double.Parse(Console.ReadLine());
+  Console.WriteLine("Enter point x2 as a double");
   x2 = double.Parse(Console.ReadLine());
-  Console.WriteLine("Enter times t1 and t2: as doubles");
+  Console.WriteLine("Enter time t1 as a double");
   t1 = double.Parse(Console.ReadLine());
+  Console.WriteLine("Enter time t2: as a double");
   t2 = double.Parse(Console.ReadLine());
   avgVel = (x2 - x1) / (t2 - t1);
   Console.WriteLine($"The average velocity is: {avgVel:n4}");
 }
 
 /*
+The following is for calculating FV using MONTHLY COMPOUND
 Where:
 FV = Future value
 I = Initial investment amount
