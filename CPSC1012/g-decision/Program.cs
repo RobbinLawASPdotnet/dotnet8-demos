@@ -74,14 +74,17 @@ void Demo3()
   Console.Write("Enter an integer: ");
   int num = int.Parse(Console.ReadLine());
   // Display message if number is divisible by 2 and 3.
+  // The AND operator
   if (num % 2 == 0 && num % 3 == 0)
   {
     Console.WriteLine($"{num} is divisible by 2 and 3.");
   }
+  // The OR operator
   if (num % 2 == 0 || num % 3 == 0)
   {
     Console.WriteLine($"{num} is divisible by 2 OR 3.");
   }
+  // The EXCLUSIVE OR operator is very rarely used.
   if (num % 2 == 0 ^ num % 3 == 0)
   {
     Console.WriteLine($"{num} is divisible by 2 XOR 3.");
@@ -343,15 +346,16 @@ void Demo11()
   }
   double salesTax;
   double finalPrice;
-  if (taxRate < 0) // Check for invalid Input
+  // Check for invalid Input
+  if (taxRate < 0)
     Console.WriteLine("Invalid Input.");
   else
   {
     salesTax = beforeTax * taxRate;
     finalPrice = beforeTax + salesTax;
-    Console.WriteLine($"Item Price: {beforeTax:C}");
-    Console.WriteLine($"Sales Tax: {salesTax:C}");
-    Console.WriteLine($"Price for item in {provinceStr}: {finalPrice:C}");
+    Console.WriteLine($"Item Price: {beforeTax:c}");
+    Console.WriteLine($"Sales Tax: {salesTax:c}");
+    Console.WriteLine($"Price for item in {provinceStr}: {finalPrice:c}");
   }
 }
 
