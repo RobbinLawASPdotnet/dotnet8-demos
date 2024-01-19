@@ -1,26 +1,26 @@
 ﻿// Decision Demos
 
-// Demo-1-If, If Else, and If Else If Demo
+// Demo-1 - If, If-Else, and If-Else-If Demo
 Demo1();
-// Demo-2-If Else: Pollution Level
+// Demo-2 - If-Else: Pollution Level
 //Demo2();
-// Demo-3-Boolean Operands
+// Demo-3 - Boolean Operands
 //Demo3();
-// Demo-4-If Else with Boolean: Student Pass or Fail
+// Demo-4 - If-Else with Boolean: Student Pass or Fail
 //Demo4();
-// Demo-5-If Else If: Storm Level
+// Demo-5 - If-Else-If: Storm Level
 //Demo5();
-// Demo-6-If: Window Area Calculator
+// Demo-6 - If: Window Area Calculator
 //Demo6();
-// Demo-7-If, If Else: Leap Year
+// Demo-7 - If, If-Else: Leap Year
 //Demo7();
-// Demo-8-If Else If: Student Grade
+// Demo-8 - If-Else-If: Student Grade
 //Demo8();
-// Demo-9-If Else If compared with equivalent Switch Case
+// Demo-9 - If-Else-If compared with equivalent Switch-Case
 //Demo9();
-// Demo-10-Switch Case: Pet Food
+// Demo-10 - Switch-Case: Pet Food
 //Demo10();
-// Demo-11-Switch Case: All Provinces Sales Tax Calculator
+// Demo-11 - Switch-Case: All Provinces Sales Tax Calculator
 //Demo11();
 
 void Demo1()
