@@ -1,7 +1,7 @@
 ﻿// Sequence Demos
 
 // Demo-1-String Interpolation
-//Demo1();
+Demo1();
 // Demo-2-Escape Characters
 //Demo2();
 // Demo-3-Concatenate strings & Injecting Variable Values with String Interpolation
@@ -13,7 +13,7 @@
 // Demo-6-Circle Circumference
 //Demo6();
 // Demo-7-Average Velocity
-Demo7();
+//Demo7();
 // Demo-8-Simple Future Value using compounding interest on a
 // monthly basis
 //Demo8();
