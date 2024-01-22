@@ -12,16 +12,17 @@
 
 ### Method 1
 
+- Open VSCode with the top level folder being `C:\CPSC1012`
 - From within VSCode start a terminal.
   - From the top menu choose `Terminal/New Terminal`.
   - You may have to press the `...` to see the `Terminal` option.
-- From the terminal type the following commands:
+- We want to create a new project in the C:\CPSC1012 folder.
+- From the terminal type the following command:
   - Note that if you already have a project named `ConsoleApp1` name the new project `ConsoleApp2`.
-
 ```csharp
-cd C:\CPSC1012
 dotnet new console -n ConsoleApp1 --framework net8.0
 ```
+
 - In the .csproj file that is created comment out the following:
 ```csharp
 <!-- <Nullable>enable</Nullable> -->
