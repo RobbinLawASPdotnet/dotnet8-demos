@@ -9,11 +9,11 @@
 // Demo-4 - If-Else with Boolean: Student Pass or Fail
 //Demo4();
 // Demo-5 - If-Else-If: Storm Level
-Demo5();
+//Demo5();
 // Demo-6 - If: Window Area Calculator
 //Demo6();
-// Demo-7 - If, If-Else: Leap Year
-//Demo7();
+// Demo-7 - If, If-Else: Leap Year2024
+Demo7();
 // Demo-8 - If-Else-If: Student Grade
 //Demo8();
 // Demo-9 - If-Else-If compared with equivalent Switch-Case
@@ -30,9 +30,13 @@ void Demo1()
   if (myDouble > 3.0)
     Console.WriteLine($"The number is > 3");
   if (myDouble > 4.0)
+  {
     Console.WriteLine($"The number is > 4");
+    Console.WriteLine("Hey man");
+  }
   if (myDouble < 3.0)
     Console.WriteLine($"The number is < 3");
+  Console.WriteLine("Hey something is up");
 
   if (myDouble > 3.0)
     Console.WriteLine($"The number is > 3");
@@ -150,8 +154,9 @@ void Demo6()
   const double MIN_HEIGHT = 0.75;
   string widthString, heightString;
   Console.Write("Give the width of the window : ");
-  widthString = Console.ReadLine()!;
+  widthString = Console.ReadLine();
   width = double.Parse(widthString);
+  Console.WriteLine($"widthString: {widthString}, width: {width}");
   if (width < MIN_WIDTH)
   {
     Console.WriteLine("Width is too small.\n\n ");
@@ -194,6 +199,7 @@ void Demo7()
   bool isLeapYear = false;
   // (if year is divisible by 4 AND the year is not divisible by 100)
   // OR the year is divisible by 400.
+  Console.WriteLine($"year%4: {year % 4}, year%100: {year % 100}, year%400: {year % 400}");
   if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
     isLeapYear = true;
   if (isLeapYear)

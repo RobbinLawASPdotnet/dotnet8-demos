@@ -10,7 +10,7 @@ Demo1();
 //Demo4();
 // Demo-5-ReadLine with Parse
 //Demo5();
-// Demo-6-Circle Circumference
+// Demo-6-Circle Circumference and Area
 //Demo6();
 // Demo-7-Average Velocity
 //Demo7();
