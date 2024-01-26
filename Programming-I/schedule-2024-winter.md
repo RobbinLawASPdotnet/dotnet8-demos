@@ -16,11 +16,11 @@
 |1-J08||Setup/Prob-Solve|Setup/Prob-Solve|Setup/Prob-Solve|
 |2-J15|L1-Prob-Solve (2%)|Sequence|Sequence|Sequence|
 |3-J22|L2-Sequence (2%)|Decision|Decision|Decision|
-|4-J29|Q1-Prob-Solve/Sequence (4%)<br>A1-Prob-Solve/Sequence (5%)|Decision|Decision|Decision|
+|4-J29|Q1-Prob-Solve/Sequence (4%)<br>A1-Prob-Solve/Sequence (5%)|Decision/Loops|Decision/Loops|Decision/Loops|
 |5-F05|L3-Decision (3%)|Loops|Loops|Loops|
-|6-F12|L4-Loops (3%)|Loops|Loops|Loops|
+|6-F12|L4-Loops (3%)|Functions|Functions|Functions|
 |F19|||||
-|7-F26|Q2-Decisions/Loops (4%)<br>A2-Decisions (10%)|Functions|Functions|Functions|
+|7-F26|Q2-Decisions/Loops (4%)<br>A2-Decisions (10%)|Exceptions|Exceptions|Exceptions|
 |8-M04|L6-Functions (5%)|Exceptions|Exceptions|Exceptions|
 |9-M11||Arrays|Arrays|Arrays|
 |10-M18|L5-Arrays (5%)|Files|Files|Files|
