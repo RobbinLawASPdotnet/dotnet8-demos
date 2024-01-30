@@ -3,8 +3,9 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>y_delegate_experiment</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <!-- <Nullable>enable</Nullable> -->
   </PropertyGroup>
 
 </Project>
