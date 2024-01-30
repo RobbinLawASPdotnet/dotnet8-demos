@@ -21,7 +21,7 @@ void Demo1()
     while (inValidInput)
     {
       Console.Write(msg);
-      num = int.Parse(Console.ReadLine()!);
+      num = int.Parse(Console.ReadLine());
       if (num > 0)
         inValidInput = false;
       else
@@ -39,7 +39,7 @@ void Demo1()
       try
       {
         Console.Write(msg);
-        num = int.Parse(Console.ReadLine()!);
+        num = int.Parse(Console.ReadLine());
         if (num < 0)
           throw new Exception("Must be bigger than zero.");
         inValidInput = false;
@@ -58,7 +58,7 @@ void Demo2()
   try
   {
     Console.Write($"Enter your name: ");
-    string myName = Console.ReadLine()!;
+    string myName = Console.ReadLine();
     string returnedString = MyMethod(myName);
     Console.WriteLine($"App try: returned string: {returnedString}");
   }
@@ -133,7 +133,7 @@ void Demo3()
       try
       {
         Console.WriteLine($"{prompt} between {low:n1} and {high:n1}: ");
-        num = double.Parse(Console.ReadLine()!);
+        num = double.Parse(Console.ReadLine());
         if (num < low || num > high)
         {
           throw new Exception("Invalid Input");

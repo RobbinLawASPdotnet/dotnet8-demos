@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>r_objects</RootNamespace>
+    <RootNamespace>o_arrays</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <!-- <Nullable>enable</Nullable> -->
     <NoWarn>IDE0062;CS8321</NoWarn>

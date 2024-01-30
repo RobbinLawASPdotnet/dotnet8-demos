@@ -19,7 +19,7 @@ namespace Objects
 				try
 				{
 					Console.Write(msg);
-					str = Console.ReadLine()!;
+					str = Console.ReadLine();
 					if(PreformValidation == "yes")
 					{
 						if(string.IsNullOrEmpty(str))
@@ -47,7 +47,7 @@ namespace Objects
 				try
 				{
 					Console.Write(msg);
-					num = int.Parse(Console.ReadLine()!);
+					num = int.Parse(Console.ReadLine());
 					if(PreformValidation == "yes")
 						if (num < min || num > max)
 							throw new Exception($"Must be between {min} and {max}");

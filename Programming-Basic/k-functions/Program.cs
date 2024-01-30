@@ -61,7 +61,7 @@ void Demo2()
     do
     {
       Console.WriteLine($"{prompt} between {low:n9} and {high:n1}:");
-      string resultString = Console.ReadLine()!;
+      string resultString = Console.ReadLine();
       result = double.Parse(resultString);
     } while ((result < low) || (result > high));
     return result;
@@ -73,7 +73,7 @@ void Demo2()
     while ((num < low) || (num > high))
     {
       Console.WriteLine($"{prompt} between {low} and {high}:");
-      string resultString = Console.ReadLine()!;
+      string resultString = Console.ReadLine();
       num = int.Parse(resultString);
     }
     return num;
@@ -86,7 +86,7 @@ void Demo2()
     while (invalidInput)
     {
       Console.WriteLine($"{prompt} between {low} and {high}: ");
-      num = int.Parse(Console.ReadLine()!);
+      num = int.Parse(Console.ReadLine());
       if (num >= low && num <= high)
         invalidInput = false;
       else
@@ -102,7 +102,7 @@ void Demo2()
     while (inValidInput)
     {
       Console.WriteLine($"{prompt} between {low} and {high}:");
-      string resultString = Console.ReadLine()!;
+      string resultString = Console.ReadLine();
       num = int.Parse(resultString);
       if ((num < low) || (num > high))
         Console.WriteLine($"Error: Invalid Input.");
@@ -128,7 +128,7 @@ void Demo3()
     while (invalidInput)
     {
       Console.WriteLine($"{prompt} between {low:n1} and {high:n1}: ");
-      num = double.Parse(Console.ReadLine()!);
+      num = double.Parse(Console.ReadLine());
       if (num >= low && num <= high)
         invalidInput = false;
       else
@@ -151,13 +151,13 @@ void Demo4()
   int x1, x2, y1, y2;
   double slope, intercept;
   Console.WriteLine("please enter the X coordinate of the first point: ");
-  x1 = int.Parse(Console.ReadLine()!);
+  x1 = int.Parse(Console.ReadLine());
   Console.WriteLine("please enter the X coordinate of the second point: ");
-  x2 = int.Parse(Console.ReadLine()!);
+  x2 = int.Parse(Console.ReadLine());
   Console.WriteLine("please enter the Y coordinate of the first point: ");
-  y1 = int.Parse(Console.ReadLine()!);
+  y1 = int.Parse(Console.ReadLine());
   Console.WriteLine("please enter the Y coordinate of the second point: ");
-  y2 = int.Parse(Console.ReadLine()!);
+  y2 = int.Parse(Console.ReadLine());
   slope = compute_slope(x1, y1, x2, y2);
   intercept = compute_intercept(x1, y1, slope);
   Console.WriteLine($"The slope is {slope}, and the intercept is {intercept}");
