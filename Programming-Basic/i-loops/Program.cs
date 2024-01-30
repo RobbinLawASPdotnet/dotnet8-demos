@@ -27,14 +27,14 @@ void Demo1()
 {
   //i++ is the same as i = i + 1
   for (int i = 0; i < 4; i++)
-    Console.WriteLine("I will not sleep in class.");
+    Console.WriteLine($"{i}. I will not sleep in class.");
 }
 
 void Demo2()
 {
   // Prompt and read number of students
   Console.Write("Enter the number of students: ");
-  int numStudents = int.Parse(Console.ReadLine()!);
+  int numStudents = int.Parse(Console.ReadLine());
   // For Each student, prompt and read in their mark
   // Calculate a running total.
   double sumOfMarks = 0;
@@ -43,7 +43,7 @@ void Demo2()
   for (int i = 1; i <= numStudents; i++)
   {
     Console.Write($"Enter mark for student #{i}: ");
-    curMark = double.Parse(Console.ReadLine()!);
+    curMark = double.Parse(Console.ReadLine());
     //sumOfMarks = sumOfMarks + curMark;
     sumOfMarks += curMark;
   }
@@ -59,12 +59,12 @@ void Demo3()
   double sales;
   double totalSales;
   Console.Write("Enter the number of days: ");
-  days = int.Parse(Console.ReadLine()!);
+  days = int.Parse(Console.ReadLine());
   totalSales = 0;
   for (int i = 1; i <= days; i++)
   {
     Console.Write($"Enter sales as a number for day #{i}: $ ");
-    sales = double.Parse(Console.ReadLine()!);
+    sales = double.Parse(Console.ReadLine());
     totalSales += sales;
   }
   Console.WriteLine($"Total Sales: {totalSales:C}");
@@ -80,12 +80,12 @@ void Demo4()
   double avgMark;
   // Grab our input
   Console.Write("Enter number of students: ");
-  numStudents = int.Parse(Console.ReadLine()!);
+  numStudents = int.Parse(Console.ReadLine());
   // Loop over each of our students
   for (int i = 1; i <= numStudents; i++)
   {
     Console.Write($"Enter mark for student # {i}: ");
-    curMark = double.Parse(Console.ReadLine()!);
+    curMark = double.Parse(Console.ReadLine());
     // Is this the highest or lowest mark we've seen?
     if (curMark < minMark)
       minMark = curMark;
@@ -120,12 +120,12 @@ void Demo6()
                                // Get current temperature.
                                // As long as necessary, instruct the technician to adjust temperature.
   Console.Write("Please enter new temperature: ");
-  double curTemp = double.Parse(Console.ReadLine()!);
+  double curTemp = double.Parse(Console.ReadLine());
   while (curTemp > maxTemp)
   {
     Console.WriteLine($"Warning! Temp: {curTemp}C is too high. Decrease by {curTemp - maxTemp}");
     Console.Write("Please enter new temperature: ");
-    curTemp = double.Parse(Console.ReadLine()!);
+    curTemp = double.Parse(Console.ReadLine());
   }
   Console.WriteLine("Phew! You did it! Got those temperatures under control!");
 }
@@ -143,14 +143,14 @@ void Demo7()
   {
     //Get number of players per team
     Console.Write("Enter Players per team (between 9-15): ");
-    teamSize = int.Parse(Console.ReadLine()!);
+    teamSize = int.Parse(Console.ReadLine());
   }
   // Get the number of available players
   players = 0;
   while (players < 1)
   {
     Console.Write("Enter Number of available players: ");
-    players = int.Parse(Console.ReadLine()!);
+    players = int.Parse(Console.ReadLine());
   }
   // Calculate the number of teams using integer math.
   numTeams = players / teamSize;
@@ -173,9 +173,9 @@ void Demo8()
   bool guessNotCorrect = true;
   while (guessNotCorrect && numAttempts < MAX_ATTEMPTS)
   {
-    Console.WriteLine($"You have {MAX_ATTEMPTS - numAttempts} remaining quesees.");
+    Console.WriteLine($"You have {MAX_ATTEMPTS - numAttempts} remaining guesses.");
     Console.Write("Guess a number (1-100): ");
-    guess = int.Parse(Console.ReadLine()!);
+    guess = int.Parse(Console.ReadLine());
     numAttempts++;
     if (guess < num)
     {
@@ -209,7 +209,7 @@ void Demo9()
   do
   {
     Console.Write("Enter an integer number (0 to exit): ");
-    num = int.Parse(Console.ReadLine()!);
+    num = int.Parse(Console.ReadLine());
     sum += num;
   } while (num != 0);
   Console.WriteLine($"\nSum of Numbers {sum}");
@@ -226,7 +226,7 @@ void Demo10()
   do
   {
     Console.Write($"Enter mark for student #{numStudents} or 999 to quit the program: ");
-    curMark = double.Parse(Console.ReadLine()!);
+    curMark = double.Parse(Console.ReadLine());
     if (curMark >= 0 && curMark <= 100)
     {
       if (curMark < minMark)
@@ -271,7 +271,7 @@ void Demo11()
     while (stringEntered != "=")
     {
       Console.Write($"Enter a number: ");
-      stringEntered = Console.ReadLine()!;
+      stringEntered = Console.ReadLine();
       if (stringEntered != "=")
       {
         numEntered = double.Parse(stringEntered);
@@ -282,7 +282,7 @@ void Demo11()
     Console.WriteLine($"The total is {total}");
     total = 0;
     Console.Write($"Would you like to play again y or n? ");
-    playAgain = Console.ReadLine()!;
+    playAgain = Console.ReadLine();
   } while (playAgain != "n");
 }
 
