@@ -1,7 +1,7 @@
 ﻿// Loops Demos
 
 // Demo-1-For Loop Simple Demo
-Demo1();
+//Demo1();
 // Demo-2-For Loop: Class Average Calculator
 //Demo2();
 // Demo-3-For Loop: Total Sales Calculator
@@ -9,7 +9,7 @@ Demo1();
 // Demo-4-For Loop: Class Average with High/Low Play Only Once
 //Demo4();
 // Demo-5-For & While Loop Comparison
-//Demo5();
+Demo5();
 // Demo-6-While Loop: Temperature
 //Demo6();
 // Demo-7-While Loop: Soccer Team
@@ -27,7 +27,10 @@ void Demo1()
 {
   //i++ is the same as i = i + 1
   for (int i = 0; i < 4; i++)
+  {
     Console.WriteLine($"{i}. I will not sleep in class.");
+    Console.WriteLine($"by the way, this is so fun");
+  }
 }
 
 void Demo2()
@@ -95,7 +98,7 @@ void Demo4()
     sumOfMarks += curMark;
   }
   // Calculate the average
-  avgMark = (double)sumOfMarks / numStudents;
+  avgMark = sumOfMarks / numStudents;
   // Print our results
   Console.WriteLine($"\nAverage Mark: {avgMark}, Highest Mark: {maxMark}, Lowest Mark: {minMark}");
 }
