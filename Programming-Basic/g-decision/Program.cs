@@ -17,11 +17,11 @@
 // Demo-8 - If-Else-If: Student Grade
 //Demo8();
 // Demo-9 - If-Else-If compared with equivalent Switch-Case
-Demo9();
+//Demo9();
 // Demo-10 - Switch-Case: Pet Food
 //Demo10();
 // Demo-11 - Switch-Case: All Provinces Sales Tax Calculator
-//Demo11();
+Demo11();
 
 void Demo1()
 {
