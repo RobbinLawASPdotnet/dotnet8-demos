@@ -9,11 +9,11 @@
 // Demo-4-For Loop: Class Average with High/Low Play Only Once
 //Demo4();
 // Demo-5-For & While Loop Comparison
-Demo5();
+//Demo5();
 // Demo-6-While Loop: Temperature
 //Demo6();
 // Demo-7-While Loop: Soccer Team
-//Demo7();
+Demo7();
 // Demo-8-While Loop: Guess the Number Only Play Once
 //Demo8();
 // Demo-9-Do While Simple Demo
@@ -152,7 +152,7 @@ void Demo7()
   players = 0;
   while (players < 1)
   {
-    Console.Write("Enter Number of available players: ");
+    Console.Write("Enter Number of available players (greater than 0): ");
     players = int.Parse(Console.ReadLine());
   }
   // Calculate the number of teams using integer math.
