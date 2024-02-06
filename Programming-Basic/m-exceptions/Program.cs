@@ -9,28 +9,28 @@ Demo1();
 
 void Demo1()
 {
-  int myInt1 = GetInt1($"GetInt1: Enter a + integer value: ");
+  int myInt1 = GetInt1($"GetInt1: Enter a integer value > : ", 4);
   Console.WriteLine($"Congrats, you entered {myInt1}");
-  int myInt2 = GetInt2($"GetInt2: Enter a + integer value: ");
+  int myInt2 = GetInt2($"GetInt2: Enter a integer value > : ", 6);
   Console.WriteLine($"Congrats, you entered {myInt2}");
 
-  int GetInt1(String msg)
+  int GetInt1(String msg, int min)
   {
     bool inValidInput = true;
     int num = 0;
     while (inValidInput)
     {
-      Console.Write(msg);
+      Console.Write(msg + min);
       num = int.Parse(Console.ReadLine());
-      if (num > 0)
+      if (num > min)
         inValidInput = false;
       else
-        Console.WriteLine("Invalid. Must be bigger than zero.");
+        Console.WriteLine($"Invalid. Must be > {min}.");
     }
     return num;
   }
 
-  int GetInt2(String msg)
+  int GetInt2(String msg, int min)
   {
     bool inValidInput = true;
     int num = 0;
@@ -38,15 +38,15 @@ void Demo1()
     {
       try
       {
-        Console.Write(msg);
+        Console.Write(msg + min);
         num = int.Parse(Console.ReadLine());
-        if (num < 0)
-          throw new Exception("Must be bigger than zero.");
+        if (num < min)
+          throw new Exception($"Invalid. Must be > {min}.");
         inValidInput = false;
       }
       catch (Exception ex)
       {
-        Console.WriteLine($"Invalid: {ex.Message}");
+        Console.WriteLine(ex.Message);
       }
     }
     return num;
@@ -135,24 +135,24 @@ void Demo3()
         Console.WriteLine($"{prompt} between {low:n1} and {high:n1}: ");
         num = double.Parse(Console.ReadLine());
         if (num < low || num > high)
-        {
           throw new Exception("Invalid Input");
-        }
         invalidInput = false;
       }
       catch (Exception ex)
       {
-        Console.WriteLine($"{ex.Message}");
+        Console.WriteLine(ex.Message);
       }
     }
     return num;
   }
+
   double circleArea(double radius)
   {
     double result = Math.PI * radius * radius;
     return result;
     // return (Math.PI * radius * radius);
   }
+
   double circleCircumference(double radius)
   {
     return (2 * Math.PI * radius);
