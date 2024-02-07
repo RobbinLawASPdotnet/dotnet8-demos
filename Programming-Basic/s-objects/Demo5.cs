@@ -15,7 +15,7 @@ namespace Objects
 				List<StudentInfoWithFullProperties> students = new();
 				//read the csv file and each line becomes a new student added to the list.
 				string[] csvFileInput = File.ReadAllLines(csvFileName);
-				StudentInfoWithFullProperties? student = null;
+				StudentInfoWithFullProperties student = null;
 				//each line read from the file is a string that now has to be parsed into different types.
 				foreach(string line in csvFileInput)
 				{
