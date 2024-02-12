@@ -3,11 +3,11 @@
 // 1-Simple Demo
 //Demo1();
 // 2-Simple Input Validation
-Demo2();
+//Demo2();
 // 3-Circle Area and Circumference
 //Demo3();
 // 4-Equation of a Line
-//Demo4();
+Demo4();
 
 void Demo1()
 {
@@ -167,6 +167,7 @@ void Demo4()
     double slope;
     slope = (y2 - y1) / (x2 - x1);
     return slope;
+    //return (y2 - y1) / (x2 - x1);
   }
 
   /* Calculates the Y intercept of the line. */
@@ -175,6 +176,7 @@ void Demo4()
     double intercept;
     intercept = y1 - slope * x1;
     return intercept;
+    //return y1 - slope * x1;
   }
 }
 
