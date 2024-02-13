@@ -21,7 +21,7 @@
 |6-F12|L4-Loops (3%)|Functions/Exceptions|Functions/Exceptions|Functions/Exceptions|
 |F19|||||
 |7-F26|L6-Functions (5%)|Exceptions|Exceptions|Exceptions|
-|8-M04|Q2-Decisions/Loops (4%)<br>A2-Decisions/Exceptions (10%)|Arrays|Arrays|Arrays|
+|8-M04|Q2-Decisions/Loops (4%)<br>A2-Decisions/Loops/Functions/Exceptions (10%)|Arrays|Arrays|Arrays|
 |9-M11||Lists|Lists|Lists|
 |10-M18|L5-Arrays (5%)|Files|Files|Files|
 |11-M25|L7-Files (5%)|Files|Files|Files|
