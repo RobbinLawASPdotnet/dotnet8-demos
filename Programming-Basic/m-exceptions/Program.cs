@@ -1,9 +1,9 @@
 ﻿// Exceptions Demos
 
 // 1-Try Catch Simple Demo
-Demo1();
+//Demo1();
 // 2-Try Catch Finally
-//Demo2();
+Demo2();
 // 3-Try Catch Circle Area and Circumference
 //Demo3();
 
@@ -20,7 +20,7 @@ void Demo1()
     int num = 0;
     while (inValidInput)
     {
-      Console.Write(msg + min);
+      Console.WriteLine(msg + min);
       num = int.Parse(Console.ReadLine());
       if (num > min)
         inValidInput = false;
@@ -38,7 +38,7 @@ void Demo1()
     {
       try
       {
-        Console.Write(msg + min);
+        Console.WriteLine(msg + min);
         num = int.Parse(Console.ReadLine());
         if (num < min)
           throw new Exception($"Invalid. Must be > {min}.");
@@ -62,9 +62,9 @@ void Demo2()
     string returnedString = MyMethod(myName);
     Console.WriteLine($"App try: returned string: {returnedString}");
   }
-  catch (Exception ex)
+  catch (Exception example)
   {
-    Console.WriteLine($"Exception {ex.Message}");
+    Console.WriteLine($"Exception {example.Message}");
   }
 
   string MyMethod(string name)
@@ -77,7 +77,7 @@ void Demo2()
         throw new FormatException($"Bad Name: {name}");
       if (name == "robbinlaw")
         throw new FieldAccessException($"Bad Name: {name}");
-      return $"MyMethod try: Good Name: {name}";
+      //return $"MyMethod try: Good Name: {name}";
     }
     catch (ArgumentNullException ex)
     {
