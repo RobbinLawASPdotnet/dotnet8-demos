@@ -225,7 +225,7 @@ int GetIntBetweenMinMax(String msg, int min, int max)
   {
     try
     {
-      Console.Write(msg);
+      Console.Write($"{msg} between {min} and {max}: ");
       num = int.Parse(Console.ReadLine());
       if (num < min || num > max)
         throw new Exception($"Must be between {min} and {max}");
