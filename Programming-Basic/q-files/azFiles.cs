@@ -265,7 +265,3 @@ namespace Files
 		#endregion
 	}
 }
-
-
-			
-	
