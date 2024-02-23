@@ -115,47 +115,47 @@ void Demo3()
 {
   try
   {
-    double radius = getNumber("Enter Circle Radius", 2.0, 6.0);
-    double areaCalc = circleArea(radius);
+    double radius = GetDoubleBetweenMinMax("Enter Circle Radius", 2.0, 6.0);
+    double areaCalc = CircleArea(radius);
     Console.WriteLine($"The Circle Area is: {areaCalc:n2}");
-    Console.WriteLine($"The Circle Area is: {circleArea(radius):n2}");
-    Console.WriteLine($"The Circle Circumference is: {circleCircumference(radius):n2}");
+    Console.WriteLine($"The Circle Area is: {CircleArea(radius):n2}");
+    Console.WriteLine($"The Circle Circumference is: {CircleCircumference(radius):n2}");
   }
   catch (Exception ex)
   {
     Console.WriteLine($"Exception: {ex.Message}");
   }
 
-  double getNumber(string prompt, double low, double high)
+  double GetDoubleBetweenMinMax(String msg, double min, double max)
   {
+    bool inValidInput = true;
     double num = 0.0;
-    bool invalidInput = true;
-    while (invalidInput)
+    while (inValidInput)
     {
       try
       {
-        Console.WriteLine($"{prompt} between {low:n1} and {high:n1}: ");
+        Console.Write($"{msg} between {min:n1} and {max:n1}: ");
         num = double.Parse(Console.ReadLine());
-        if (num < low || num > high)
-          throw new Exception("Invalid Input");
-        invalidInput = false;
+        if (num < min || num > max)
+          throw new Exception($"Must be between {min:n1} and {max:n1}");
+        inValidInput = false;
       }
       catch (Exception ex)
       {
-        Console.WriteLine(ex.Message);
+        Console.WriteLine($"Invalid: {ex.Message}");
       }
     }
     return num;
   }
-
-  double circleArea(double radius)
+  
+  double CircleArea(double radius)
   {
     double result = Math.PI * radius * radius;
     return result;
     // return (Math.PI * radius * radius);
   }
 
-  double circleCircumference(double radius)
+  double CircleCircumference(double radius)
   {
     return (2 * Math.PI * radius);
   }
@@ -228,6 +228,7 @@ void Demo4()
   void AddNumbersAndPrint(int num1, int num2)
   {
     Console.WriteLine($"The addition of {num1} and {num2} result: {num1 + num2}");
+    throw new Exception("BAD");
   }
 
   void MultiplyNumbersAndPrint(int num1, int num2)

@@ -1,13 +1,13 @@
 ﻿// Functions Demos
 
 // 1-Simple Demo
-//Demo1();
+Demo1();
 // 2-Simple Input Validation
 //Demo2();
 // 3-Circle Area and Circumference
 //Demo3();
 // 4-Equation of a Line
-Demo4();
+//Demo4();
 
 void Demo1()
 {
@@ -136,10 +136,12 @@ void Demo3()
     }
     return num;
   }
+
   double circleArea(double radius)
   {
     return (Math.PI * radius * radius);
   }
+
   double circleCircumference(double radius)
   {
     return (2 * Math.PI * radius);
