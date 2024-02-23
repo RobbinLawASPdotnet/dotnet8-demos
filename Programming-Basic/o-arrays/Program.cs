@@ -1,11 +1,8 @@
 ﻿// Arrays Demos
 
 // Demo-1-Arrays-Simple-Stormy
-//Demo1();
 // Demo-2-Arrays with methods ave, min, max, sort
-//Demo2();
 // Demo-3-Arrays vs Lists
-//Demo3();
 
 bool goAgain = true;
 while (goAgain)
@@ -21,7 +18,7 @@ while (goAgain)
     if (mainMenuChoice == "Q")
     {
       goAgain = false;
-      throw new Exception("Bye, hope to see you again.");
+      throw new Exception("Bye, hope to see you again soon.");
     }
   }
   catch (Exception ex)
