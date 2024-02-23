@@ -3,9 +3,11 @@
 // 1-Try Catch Simple Demo
 //Demo1();
 // 2-Try Catch Finally
-Demo2();
+//Demo2();
 // 3-Try Catch Circle Area and Circumference
 //Demo3();
+// 4-Try Simple Double Menu
+Demo4();
 
 void Demo1()
 {
@@ -158,3 +160,80 @@ void Demo3()
     return (2 * Math.PI * radius);
   }
 }
+
+void Demo4()
+{
+  bool goAgain = true;
+  while (goAgain)
+  {
+    try
+    {
+      DisplayMainMenu();
+      string mainMenuChoice = Prompt("\nEnter a Main Menu Choice: ");
+      if (mainMenuChoice == "P")
+        Console.WriteLine("Hi There");
+      if (mainMenuChoice == "D")
+        Console.WriteLine("Hey This is Fun");
+      if (mainMenuChoice == "Q")
+      {
+        goAgain = false;
+        throw new Exception("Bye, hope to see you again.");
+      }
+      if (mainMenuChoice == "S")
+      {
+        while (true)
+        {
+          DisplaySecondaryMenu();
+          string secondaryMenuChoice = Prompt("\nEnter a Secondary Menu Choice: ");
+          if (secondaryMenuChoice == "A")
+            AddNumbersAndPrint(2, 3);
+          if (secondaryMenuChoice == "M")
+            MultiplyNumbersAndPrint(5, 4);
+          if (secondaryMenuChoice == "R")
+            throw new Exception("Returning to Main Menu");
+        }
+      }
+    }
+    catch (Exception ex)
+    {
+      Console.WriteLine($"{ex.Message}");
+    }
+  }
+
+  void DisplayMainMenu()
+  {
+    Console.WriteLine("\nMain Menu");
+    Console.WriteLine("P) Print: Hi There");
+    Console.WriteLine("D) Display: Hey This is Fun");
+    Console.WriteLine("S) Secondary Menu");
+    Console.WriteLine("Q) Quit");
+  }
+
+  void DisplaySecondaryMenu()
+  {
+    Console.WriteLine("\nSecondary Menu");
+    Console.WriteLine("A) Add 2 and 3 and print");
+    Console.WriteLine("M) Multiply 5 and 4 and print");
+    Console.WriteLine("R) Return to Main Menu");
+  }
+
+  string Prompt(string prompt)
+  {
+    string response = "";
+    Console.Write(prompt);
+    response = Console.ReadLine();
+    return response.ToUpper();
+  }
+
+  void AddNumbersAndPrint(int num1, int num2)
+  {
+    Console.WriteLine($"The addition of {num1} and {num2} result: {num1 + num2}");
+  }
+
+  void MultiplyNumbersAndPrint(int num1, int num2)
+  {
+    Console.WriteLine($"The multiplication of {num1} and {num2} result: {num1 * num2}");
+  }
+
+}
+
