@@ -6,11 +6,10 @@ namespace Objects
 {
 	public class CommonMethods
 	{
-		private const string SPECIALCHARACTERS = @",:;\/!?@#$%^&*~`0123456789";
 		//This is a class method that can be called without instantiating an object
 		//of this class. The key word static makes it a class method.
-		//Just call that class name and method, CommonMethods.GetString("hi","yes");
-		public static string GetString(String msg, String PreformValidation)
+		//Just call that class name and method, CommonMethods.GetString("hi");
+		public static string GetString(String msg)
 		{
 			bool inValidInput = true;
 			string str = "";
@@ -20,15 +19,7 @@ namespace Objects
 				{
 					Console.Write(msg);
 					str = Console.ReadLine();
-					if(PreformValidation == "yes")
-					{
-						if(string.IsNullOrEmpty(str))
-							throw new ArgumentException("The string cannot be empty");
-						foreach(char character in SPECIALCHARACTERS)
-							if (str.Contains(character))
-								throw new FormatException($"The string contains an invalid character.");
-					}
-					inValidInput = false; 
+					inValidInput = false;
 				}
 				catch (Exception ex)
 				{
@@ -37,8 +28,9 @@ namespace Objects
 			}
 			return str;
 		}
+
 		//This is another class method.
-		public static int GetIntBetweenMinMax(String msg, int min, int max, String PreformValidation)
+		public static int GetIntBetweenMinMax(String msg, int min, int max)
 		{
 			bool inValidInput = true;
 			int num = 0;
@@ -46,12 +38,11 @@ namespace Objects
 			{
 				try
 				{
-					Console.Write(msg);
+					Console.Write($"{msg} between {min} and {max}: ");
 					num = int.Parse(Console.ReadLine());
-					if(PreformValidation == "yes")
-						if (num < min || num > max)
-							throw new Exception($"Must be between {min} and {max}");
-					inValidInput = false; 
+					if (num < min || num > max)
+						throw new Exception($"Must be between {min} and {max}");
+					inValidInput = false;
 				}
 				catch (Exception ex)
 				{

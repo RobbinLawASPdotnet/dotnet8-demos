@@ -162,55 +162,6 @@ void Demo2()
   }
 }
 
-void Demo3()
-{
-  try
-  {
-    WithArrays();
-    WithLists();
-  }
-  catch (Exception ex)
-  {
-    Console.WriteLine($"Exception in demo3: {ex.Message}");
-  }
-
-  void WithArrays()
-  {
-    Console.WriteLine("*** Using traditional arrays where size must be statically set at declaration ***");
-    int studentCount = GetIntBetweenMinMax("How many students in your class? ", 0, 100);
-    string[] studentNames = new string[studentCount];
-    int[] studentGrades = new int[studentCount];
-    for (int i = 0; i < studentCount; i++)
-    {
-      studentNames[i] = GetString("Student Name: ");
-      studentGrades[i] = GetIntBetweenMinMax("Student Grade: ", 0, 100);
-    }
-    for (int i = 0; i < studentCount; i++)
-    {
-      Console.WriteLine($"Name: {studentNames[i]}, Grade: {studentGrades[i]}");
-    }
-  }
-
-	void WithLists()
-  {
-    Console.WriteLine("*** Using dynamic arrays called lists where size is not set at declaration ***");
-    List<string> studentNames = new List<string>();
-    List<int> studentGrades = new List<int>();
-    var adding = true;
-    while(adding)
-    {
-      studentNames.Add(GetString("Student Name: "));
-      studentGrades.Add(GetIntBetweenMinMax("Student Grade: ", 0, 100));
-      if (GetString("Add another? y/n: ") == "n")
-        adding = false;
-    }
-    for (int i = 0; i < studentNames.Count; i++)
-    {
-      Console.WriteLine($"Name: {studentNames[i]}, Grade: {studentGrades[i]}");
-    }
-  }
-}
-
 // Functions used by all demos
 string GetString(String msg)
 {

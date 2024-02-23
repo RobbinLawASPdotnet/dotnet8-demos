@@ -8,8 +8,7 @@ namespace Objects
 	{
 		private void WithArrayOfObjects()
 		{
-			String PreformValidation = "yes";
-			int studentCount = CommonMethods.GetIntBetweenMinMax("How many students in your class? ", 0, 100, PreformValidation);
+			int studentCount = CommonMethods.GetIntBetweenMinMax("How many students in your class? ", 0, 100);
 			StudentInfoWithFields[] students = new StudentInfoWithFields[studentCount];
 			string studentName;
 			int studentGrade;
@@ -17,8 +16,8 @@ namespace Objects
 			{
 				try
 				{
-					studentName = CommonMethods.GetString($"Student Name {i}: ", PreformValidation);
-					studentGrade = CommonMethods.GetIntBetweenMinMax($"Student Grade {i}: ", 0, 100, PreformValidation);
+					studentName = CommonMethods.GetString($"Student Name {i}: ");
+					studentGrade = CommonMethods.GetIntBetweenMinMax($"Student Grade {i}: ", 0, 100);
 					students[i] = new StudentInfoWithFields(studentName, studentGrade);
 				}
 				catch (Exception e)
@@ -35,7 +34,6 @@ namespace Objects
 		}
 		private void WithListOfObjects()
 		{
-			String PreformValidation = "yes";
 			List<StudentInfoWithFields> students = new List<StudentInfoWithFields>();
 			string studentName;
 			int studentGrade;
@@ -45,14 +43,14 @@ namespace Objects
 			{
 				try
 				{
-					studentName = CommonMethods.GetString($"Student Name {i}: ", PreformValidation);
-					studentGrade = CommonMethods.GetIntBetweenMinMax($"Student Grade {i}: ", 0, 100, PreformValidation);
+					studentName = CommonMethods.GetString($"Student Name {i}: ");
+					studentGrade = CommonMethods.GetIntBetweenMinMax($"Student Grade {i}: ", 0, 100);
 					StudentInfoWithFields newStudent = new StudentInfoWithFields(studentName, studentGrade);
 					students.Add(newStudent);
 					//We do not have set (mutator) access to the readonly field after instantiation.
 					// newStudent.StudentName = "jimmy";
 					i++;
-					if (CommonMethods.GetString("Add another? y/n: ", "yes") == "n")
+					if (CommonMethods.GetString("Add another? y/n: ") == "n")
 						adding = false;
 				}
 				catch (Exception e)

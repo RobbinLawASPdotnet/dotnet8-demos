@@ -27,13 +27,13 @@ namespace Objects
 			{
 				try
 				{
-					studentName = CommonMethods.GetString($"Student Name {i}: ", PreformValidation);
-					studentGrade = CommonMethods.GetIntBetweenMinMax($"Student Grade {i}: ", 0, 100, PreformValidation);
+					studentName = CommonMethods.GetString($"Student Name {i}: ");
+					studentGrade = CommonMethods.GetIntBetweenMinMax($"Student Grade {i}: ", 0, 100);
 					StudentInfoWithFullProperties newStudent = new StudentInfoWithFullProperties(studentName, studentGrade);
 					students.Add(newStudent);
 					string myStudentNameString = newStudent.StudentName;
 					i++;
-					if (CommonMethods.GetString("Add another? y/n: ", "yes") == "n")
+					if (CommonMethods.GetString("Add another? y/n: ") == "n")
 						adding = false;
 				}
 				catch (Exception e)
