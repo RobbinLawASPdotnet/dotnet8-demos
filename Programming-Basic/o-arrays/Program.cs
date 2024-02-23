@@ -1,17 +1,56 @@
 ﻿// Arrays Demos
 
 // Demo-1-Arrays-Simple-Stormy
-Demo1();
+//Demo1();
 // Demo-2-Arrays with methods ave, min, max, sort
 //Demo2();
 // Demo-3-Arrays vs Lists
 //Demo3();
 
+bool goAgain = true;
+while (goAgain)
+{
+  try
+  {
+    DisplayMainMenu();
+    string mainMenuChoice = Prompt("\nEnter a Main Menu Choice: ");
+    if (mainMenuChoice == "D")
+      Demo1();
+    if (mainMenuChoice == "E")
+      Demo2();
+    if (mainMenuChoice == "Q")
+    {
+      goAgain = false;
+      throw new Exception("Bye, hope to see you again.");
+    }
+  }
+  catch (Exception ex)
+  {
+    Console.WriteLine($"{ex.Message}");
+  }
+}
+
+void DisplayMainMenu()
+{
+  Console.WriteLine("\nMain Menu");
+  Console.WriteLine("D) Run Demo1 - Arrays Intro and Storm Category");
+  Console.WriteLine("E) Run Demo2 - Arrays with methods ave, min, max, sort");
+  Console.WriteLine("Q) Quit");
+}
+
+string Prompt(string prompt)
+{
+  string response = "";
+  Console.Write(prompt);
+  response = Console.ReadLine();
+  return response.ToUpper();
+}
 
 void Demo1()
 {
   try
   {
+    Console.WriteLine($"\nDemo1 - Arrays Intro and Storm Category");
     // char myChar = 'a';
     char[] myCharArray = ['c', 'd', 'e'];
     int[] myIntArray = [1, 2, 4, 7];
@@ -57,6 +96,7 @@ void Demo2()
 {
   try
   {
+    Console.WriteLine($"\nDemo2 - Arrays with methods ave, min, max, sort");
     int minSize = 0;
     int maxSize = 100;
     int size = GetIntBetweenMinMax($"Enter the number of items as an int between {minSize} and {maxSize}: ", minSize, maxSize);
