@@ -134,7 +134,7 @@ void Demo3()
     {
       try
       {
-        Console.Write($"{msg} between {min:n1} and {max:n1}: ");
+        Console.Write($"{msg} between {min:n1} and {max:n1} inclusive: ");
         num = double.Parse(Console.ReadLine());
         if (num < min || num > max)
           throw new Exception($"Must be between {min:n1} and {max:n1}");
@@ -228,7 +228,7 @@ void Demo4()
   void AddNumbersAndPrint(int num1, int num2)
   {
     Console.WriteLine($"The addition of {num1} and {num2} result: {num1 + num2}");
-    throw new Exception("BAD");
+    //throw new Exception("BAD");
   }
 
   void MultiplyNumbersAndPrint(int num1, int num2)
