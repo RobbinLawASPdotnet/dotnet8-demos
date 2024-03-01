@@ -2,7 +2,6 @@
 
 // Demo-1-Arrays-Simple-Stormy
 // Demo-2-Arrays with methods ave, min, max, sort
-// Demo-3-Arrays vs Lists
 
 bool goAgain = true;
 while (goAgain)
@@ -95,7 +94,7 @@ void Demo2()
   {
     Console.WriteLine($"\nDemo2 - Arrays with methods ave, min, max, sort");
     int minSize = 0;
-    int maxSize = 100;
+    int maxSize = 5;
     int size = GetIntBetweenMinMax($"Enter the number of items as an int between {minSize} and {maxSize}: ", minSize, maxSize);
     double[] numbers = new double[size];
     GetArrayItems(numbers);
