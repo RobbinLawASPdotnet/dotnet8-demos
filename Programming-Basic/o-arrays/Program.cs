@@ -48,7 +48,7 @@ void Demo1()
   {
     Console.WriteLine($"\nDemo1 - Arrays Intro and Storm Category");
     // char myChar = 'a';
-    char[] myCharArray = ['c', 'd', 'e'];
+    char[] myCharArray = ['c', 'd', 'e', 'f'];
     int[] myIntArray = [1, 2, 4, 7];
     int myDoubleArraySize = 2;
     double[] myDoubleArray = new double[myDoubleArraySize];
@@ -100,7 +100,7 @@ void Demo2()
     GetArrayItems(numbers);
     DisplayArrayItems(numbers, "Entered Numbers:");
     double avg = AverageValueOfArrayItems(numbers);
-    Console.WriteLine($"The average value is: {avg}");
+    Console.WriteLine($"The average value is: {avg:n2}");
     double min = MinValueOfArrayItems(numbers);
     double max = MaxValueOfArrayItems(numbers);
     Console.WriteLine($"min: {min} max: {max}");
@@ -119,13 +119,14 @@ void Demo2()
   void GetArrayItems(double[] arr)
   {
     for (int i = 0; i < arr.Length; i++)
-      arr[i] = GetDouble($"Enter next number as a double: ");
+      arr[i] = GetDouble($"Enter number at index {i} as a double: ");
   }
 
   double AverageValueOfArrayItems(double[] arr)
   {
     double sum = 0;
     for (int i = 0; i < arr.Length; i++)
+      //sum = sum + arr[i];
       sum += arr[i];
     return sum / arr.Length;
   }
@@ -156,7 +157,9 @@ void Demo2()
   {
     Console.WriteLine(msg);
     for (int i = 0; i < arr.Length; i++)
+    {
       Console.Write($"{arr[i]} ");
+    }
     Console.WriteLine();
   }
 }
@@ -214,8 +217,8 @@ int GetIntBetweenMinMax(String msg, int min, int max)
     {
       Console.Write($"{msg} between {min} and {max}: ");
       num = int.Parse(Console.ReadLine());
-      if (num < min || num > max)
-        throw new Exception($"Must be between {min} and {max}");
+      if (num <= min || num >= max)
+        throw new Exception($"Must be between {min} and {max} exclusive");
       inValidInput = false; 
     }
     catch (Exception ex)
