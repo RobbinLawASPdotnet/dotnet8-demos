@@ -13,8 +13,6 @@ double[] values = new double[physicalSize];
 // above to specify the physical size of the array.
 string[] dates = new string[physicalSize];
 
-string fileName = "";
-
 bool goAgain = true;
   while (goAgain)
   {
@@ -23,9 +21,9 @@ bool goAgain = true;
       DisplayMainMenu();
       string mainMenuChoice = Prompt("\nEnter a Main Menu Choice: ").ToUpper();
       if (mainMenuChoice == "L")
-        logicalSize = LoadFileValuesToMemory(fileName, dates, values);
+        logicalSize = LoadFileValuesToMemory(dates, values);
       if (mainMenuChoice == "S")
-        SaveMemoryValuesToFile(fileName, dates, values, logicalSize);
+        SaveMemoryValuesToFile(dates, values, logicalSize);
       if (mainMenuChoice == "D")
         DisplayMemoryValues(dates, values, logicalSize);
       if (mainMenuChoice == "A")
@@ -104,7 +102,7 @@ string GetFileName()
 	return fileName;
 }
 
-int LoadFileValuesToMemory(string filename, string[] dates, double[] values)
+int LoadFileValuesToMemory(string[] dates, double[] values)
 {
 	string fileName = GetFileName();
 	int logicalSize = 0;
@@ -161,7 +159,7 @@ void FindAverageOfValuesInMemory(double[] values, int logicalSize)
 	//TODO: Replace this code with yours to implement this function.
 }
 
-void SaveMemoryValuesToFile(string filename, string[] dates, double[] values, int logicalSize)
+void SaveMemoryValuesToFile(string[] dates, double[] values, int logicalSize)
 {
 	Console.WriteLine("Not Implemented Yet");
 	//TODO: Replace this code with yours to implement this function.
