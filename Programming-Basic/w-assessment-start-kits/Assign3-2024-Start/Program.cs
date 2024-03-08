@@ -1,7 +1,7 @@
 ﻿
-// TODO: declare a constant to represent the max size of the sales
+// TODO: declare a constant to represent the max size of the values
 // and dates arrays. The arrays must be large enough to store
-// sales for an entire month.
+// values for an entire month.
 int physicalSize = 31;
 int logicalSize = 0;
 
