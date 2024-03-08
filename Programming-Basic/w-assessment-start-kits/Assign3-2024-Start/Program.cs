@@ -101,26 +101,7 @@ int LoadFileValuesToMemory(string filename, string[] dates, double[] values)
 	//TODO: Replace this code with yours to implement this function.
 }
 
-void SaveMemoryValuesToFile(string filename, string[] dates, double[] values, int logicalSize)
-{
-	Console.WriteLine("Not Implemented Yet");
-	//TODO: Replace this code with yours to implement this function.
-}
-
 void DisplayMemoryValues(string[] dates, double[] values, int logicalSize)
-{
-	Console.WriteLine("Not Implemented Yet");
-	//TODO: Replace this code with yours to implement this function.
-}
-
-int AddMemoryValues(string[] dates, double[] values, int logicalSize)
-{
-	Console.WriteLine("Not Implemented Yet");
-	return 0;
-	//TODO: Replace this code with yours to implement this function.
-}
-
-void EditMemoryValues(string[] dates, double[] values, int logicalSize)
 {
 	Console.WriteLine("Not Implemented Yet");
 	//TODO: Replace this code with yours to implement this function.
@@ -141,6 +122,25 @@ double FindLowestValueInMemory(double[] values, int logicalSize)
 }
 
 void FindAverageOfValuesInMemory(double[] values, int logicalSize)
+{
+	Console.WriteLine("Not Implemented Yet");
+	//TODO: Replace this code with yours to implement this function.
+}
+
+void SaveMemoryValuesToFile(string filename, string[] dates, double[] values, int logicalSize)
+{
+	Console.WriteLine("Not Implemented Yet");
+	//TODO: Replace this code with yours to implement this function.
+}
+
+int AddMemoryValues(string[] dates, double[] values, int logicalSize)
+{
+	Console.WriteLine("Not Implemented Yet");
+	return 0;
+	//TODO: Replace this code with yours to implement this function.
+}
+
+void EditMemoryValues(string[] dates, double[] values, int logicalSize)
 {
 	Console.WriteLine("Not Implemented Yet");
 	//TODO: Replace this code with yours to implement this function.
