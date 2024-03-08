@@ -135,13 +135,10 @@ void DisplayMemoryValues(string[] dates, double[] values, int logicalSize)
 {
 	if(logicalSize == 0)
 		throw new Exception($"No Entries loaded. Please load a file to memory or add a value in memory");
-	Console.Clear();
-	Console.WriteLine($"\nCurrent Loaded Entries:  {logicalSize}\n");
-	Console.WriteLine("{0,-15} {1,10:}\n", "Date", "Value");
+	Console.WriteLine($"\nCurrent Loaded Entries: {logicalSize}");
+	Console.WriteLine($"   Date     Value");
 	for (int i = 0; i < logicalSize; i++)
-	{
-		Console.WriteLine("{0,-15} {1,10:}", dates[i], values[i]);
-	}
+		Console.WriteLine($"{dates[i]}   {values[i]}");
 }
 
 double FindHighestValueInMemory(double[] values, int logicalSize)
