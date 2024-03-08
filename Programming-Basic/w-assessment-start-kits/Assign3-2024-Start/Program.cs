@@ -94,17 +94,54 @@ string Prompt(string prompt)
   return response;
 }
 
+string GetFileName()
+{
+	string fileName = "";
+	do
+	{
+		fileName = Prompt("Enter file name including .csv or .txt: ");
+	} while (string.IsNullOrWhiteSpace(fileName));
+	return fileName;
+}
+
 int LoadFileValuesToMemory(string filename, string[] dates, double[] values)
 {
-	Console.WriteLine("Not Implemented Yet");
-	return 0;
-	//TODO: Replace this code with yours to implement this function.
+	string fileName = GetFileName();
+	int logicalSize = 0;
+	string filePath = $"./data/{fileName}";
+	if (!File.Exists(filePath))
+		throw new Exception($"The file {fileName} does not exist.");
+	string[] csvFileInput = File.ReadAllLines(filePath);
+	for(int i = 0; i < csvFileInput.Length; i++)
+	{
+		Console.WriteLine($"lineIndex: {i}; line: {csvFileInput[i]}");
+		string[] items = csvFileInput[i].Split(',');
+		for(int j = 0; j < items.Length; j++)
+		{
+			Console.WriteLine($"itemIndex: {j}; item: {items[j]}");
+		}
+		if(i != 0)
+		{
+		dates[logicalSize] = items[0];
+    values[logicalSize] = double.Parse(items[1]);
+    logicalSize++;
+		}
+	}
+  Console.WriteLine($"Load complete. {fileName} has {logicalSize} data entries");
+	return logicalSize;
 }
 
 void DisplayMemoryValues(string[] dates, double[] values, int logicalSize)
 {
-	Console.WriteLine("Not Implemented Yet");
-	//TODO: Replace this code with yours to implement this function.
+	if(logicalSize == 0)
+		throw new Exception($"No Entries loaded. Please load a file to memory or add a value in memory");
+	Console.Clear();
+	Console.WriteLine($"\nCurrent Loaded Entries:  {logicalSize}\n");
+	Console.WriteLine("{0,-15} {1,10:}\n", "Date", "Value");
+	for (int i = 0; i < logicalSize; i++)
+	{
+		Console.WriteLine("{0,-15} {1,10:}", dates[i], values[i]);
+	}
 }
 
 double FindHighestValueInMemory(double[] values, int logicalSize)
