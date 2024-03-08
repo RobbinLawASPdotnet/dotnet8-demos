@@ -1,21 +1,23 @@
-﻿// Files Demos
+﻿
+// Files Demos
 
 // Demo-1-Writing to a file with arrays
 //Demo1();
 // Demo-2-Reading from a file with arrays
-//Demo2();
+Demo2();
 // Demo-3-Write and Read csv files with parallel arrays
-Demo3();
+//Demo3();
 
 void Demo1()
 {
   try
   {
     const string csvFileName = "Data.dat";
-    int arraySize = 2;
+    int arraySize = 10;
     string[] csvLines = new string[arraySize];
     csvLines[0] = "first,line,of,array,csv";
     csvLines[1] = "second,line,of,array,csv";
+    csvLines[9] = "hi";
     File.WriteAllLines(csvFileName, csvLines);
     Console.WriteLine($"Data successfully written to file at: {Path.GetFullPath(csvFileName)}");
   }
