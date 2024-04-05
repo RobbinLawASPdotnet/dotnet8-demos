@@ -1,0 +1,466 @@
+﻿using System;
+using System.Data.SqlTypes;
+using System.Collections.Generic;
+using PetsRLaw;
+
+Pet myPet = new Pet("54N2", "Fuzzy", 4, 10, "CAT");
+List<Pet> listOfPets = new List<Pet>();
+
+bool loopAgain = true;
+while (loopAgain)
+{
+	try
+	{
+		DisplayMainMenu();
+		string mainMenuChoice = Prompt("\nEnter a Main Menu Choice: ").ToUpper();
+		if (mainMenuChoice == "N")
+			NewPet(myPet);
+		if (mainMenuChoice == "S")
+			ShowPetInfo(myPet);
+		if (mainMenuChoice == "E")
+			EditPetInfo(myPet);
+
+		if (mainMenuChoice == "F")
+			FindPetInList(listOfPets);
+		if (mainMenuChoice == "R")
+			RemovePetFromList(listOfPets);
+		if (mainMenuChoice == "D")
+			DisplayAllPetsInList(listOfPets);
+		if (mainMenuChoice == "Q")
+		{
+			loopAgain = false;
+			throw new Exception("Bye, hope to see you again.");
+		}
+		if (mainMenuChoice == "E")
+		{
+			while (true)
+			{
+				DisplayEditMenu();
+				string editMenuChoice = Prompt("\nEnter a Edit Menu Choice: ").ToUpper();
+				if (editMenuChoice == "T")
+					Console.WriteLine("Not Implemented Yet");
+					//TODO: Replace this code with yours to implement this function.
+				if (editMenuChoice == "N")
+					Console.WriteLine("Not Implemented Yet");
+					//TODO: Replace this code with yours to implement this function.
+				if (editMenuChoice == "A")
+					Console.WriteLine("Not Implemented Yet");
+					//TODO: Replace this code with yours to implement this function.
+				if (editMenuChoice == "W")
+					Console.WriteLine("Not Implemented Yet");
+					//TODO: Replace this code with yours to implement this function.
+				if (editMenuChoice == "P")
+					Console.WriteLine("Not Implemented Yet");
+					//TODO: Replace this code with yours to implement this function.
+				if (editMenuChoice == "R")
+					throw new Exception("Returning to Main Menu");
+			}
+		}
+	}
+	catch (Exception ex)
+	{
+		Console.WriteLine($"{ex.Message}");
+	}
+}
+
+void DisplayMainMenu()
+{
+	Console.WriteLine("\nMain Menu");
+	Console.WriteLine("N) New Pet PartA");
+	Console.WriteLine("S) Show Pet Info PartA");
+	Console.WriteLine("E) Edit Pet Info PartA");
+	Console.WriteLine("F) Find Pet PartB");
+	Console.WriteLine("R) Remove Pet PartB");
+	Console.WriteLine("D) Display all Pets in List PartB");
+	Console.WriteLine("Q) Quit");
+}
+
+void DisplayEditMenu()
+{
+	Console.WriteLine("Edit Menu");
+	Console.WriteLine("T) Tag");
+	Console.WriteLine("N) Name");
+	Console.WriteLine("A) Age");
+	Console.WriteLine("W) Weight");
+	Console.WriteLine("P) Type");
+	Console.WriteLine("R) Return to Main Menu");
+}
+
+string Prompt(string prompt)
+{
+	string myString = "";
+	while (true)
+	{
+		try
+		{
+		Console.Write(prompt);
+		myString = Console.ReadLine().Trim();
+		if(string.IsNullOrEmpty(myString))
+			throw new Exception($"Empty Input: Please enter something.");
+		break;
+		}
+		catch (Exception ex)
+		{
+			Console.WriteLine(ex.Message);
+		}
+	}
+	return myString;
+}
+
+void TestDefaultPet()
+{
+	Console.WriteLine("\n\tTesting default Pet constructor:");
+	Pet  myPet = new Pet();
+	DisplayPetInformation(myPet);
+}
+
+void ShowPetInfo(Pet pet)
+{
+	Console.WriteLine($"\tTag   :\t{pet.tag}");
+	Console.WriteLine($"\tName  :\t{pet.name}");
+	Console.WriteLine($"\tType  :\t{pet.type}");
+	Console.WriteLine($"\tAge   :\t{pet.age}");
+	Console.WriteLine($"\tWeight:\t{pet.weight}"); 
+}
+
+void LoadFileValuesToMemory1(List<Pet> listOfPets)
+{
+	Console.WriteLine("Not Implemented Yet");
+	//TODO: Replace this code with yours to implement this function.
+}
+
+void LoadFileValuesToMemory(List<Pet> listOfPets)
+{
+	string fileName = Prompt("Enter file name including .csv or .txt: ");
+	int logicalSize = 0;
+	string filePath = $"./data/{fileName}";
+	if (!File.Exists(filePath))
+		throw new Exception($"The file {fileName} does not exist.");
+	string[] lines = File.ReadAllLines(filePath);
+	for(int i = 0; i < lines.Length; i++)
+	{
+		//Console.WriteLine($"lineIndex: {i}; line: {lines[i]}");
+		string[] items = lines[i].Split(',');
+		for(int j = 0; j < items.Length; j++)
+			//Console.WriteLine($"itemIndex: {j}; item: {items[j]}");
+		listOfPets.Add(new Pet(items[0],items[1],double.Parse(items[2]),
+									double.Parse(items[3]), items[4]));
+	}
+  Console.WriteLine($"Load complete. {fileName} has {listOfPets.Count} data entries");
+}
+
+void DisplayMemoryValues(List<Pet> listOfPets)
+{
+	if(listOfPets.Count == 0)
+		throw new Exception($"No Entries loaded. Please load a file to memory or add a value in memory");
+	foreach (Pet item in listOfPets)
+	{
+		DisplayPetInformation(item);
+		Console.WriteLine("");
+	}
+}
+
+void AddMemoryValue(List<Pet> listOfPets)
+{
+	string tag = "";
+
+	tag = Prompt($"Enter pet tag xxxx: ");
+	foreach (Pet pet in listOfPets)
+		if(pet.tag == tag)
+			throw new Exception($"Pet with tag: {tag} is already in memory. Edit entry instead.");
+	Pet newPet = GetPetData();
+	listOfPets.Add(newPet);
+}
+
+Pet GetPetData()
+{
+	string inputValue = "";
+	string petName = "";
+	string petType = "";
+	double petAge = 0.0;
+	double petWeight = 0.0;
+	bool validFlag = false;
+
+	Console.Write("Enter your pet's name:\t");
+	petName = Console.ReadLine();
+	Console.Write("Enter your pet's type (Cat or Dog):\t");
+	petType = Console.ReadLine();
+	do
+	{
+		Console.Write("Enter your pet's age:\t");
+		inputValue = Console.ReadLine();
+		if (double.TryParse(inputValue, out petAge))
+		{
+			validFlag = true;
+		}
+		else
+		{
+			Console.WriteLine("\nValue entered is not a number. Try Again.\n");
+		}
+	} while (!validFlag);
+	validFlag=false;
+	do
+	{
+		Console.Write("Enter your pet's weight (in kgs):\t");
+		inputValue = Console.ReadLine();
+		if (double.TryParse(inputValue, out petWeight))
+		{
+			validFlag = true;
+		}
+		else
+		{
+			Console.WriteLine("\nValue entered is not a number. Try Again.\n");
+		}
+	} while (!validFlag);
+	return new Pet(petTag, petName, petAge, petWeight, petType);
+}
+
+void EditMemoryValue(List<Pet> listOfPets)
+{
+	Console.WriteLine("Not Implemented Yet");
+	//TODO: Replace this code with yours to implement this function.
+}
+
+void RemoveMemoryValue(List<Pet> listOfPets)
+{
+	Console.WriteLine("Not Implemented Yet");
+	//TODO: Replace this code with yours to implement this function.
+}
+
+void SaveMemoryValuesToFile(List<Pet> listOfPets)
+{
+	Console.WriteLine("Not Implemented Yet");
+	//TODO: Replace this code with yours to implement this function.
+}
+
+void SaveRegistryFile(List<Pet> pets)
+{
+	StreamWriter writer;
+	string fileName = "";
+	string confirm = "N";
+	Console.Write("\nEnter file name to save registry (eg: Registry.csv):\t");
+	fileName = Console.ReadLine();
+	string pathName = $"../../../{fileName}";
+	if (File.Exists(pathName))
+	{
+		Console.Write("\nSaving the Pet Registry will replace existing data. Continue (Y or N (default)):\t");
+		confirm = Console.ReadLine().ToUpper();
+		if (!confirm.Equals("Y"))
+		{
+			Console.WriteLine("\n\tPet Registry will not be saved.\n");
+		}
+	}
+	else
+	{
+		confirm = "Y";
+	}
+	if (confirm.Equals("Y"))
+	{
+		writer = new StreamWriter(pathName);
+		foreach (Pet item in pets)
+		{
+			writer.WriteLine($"{item.ToString()}");
+		}
+		writer.Close();
+		Console.WriteLine($"\n\tSave complete.  Your active current registry has been saved.\n");
+	}
+}
+
+void UpdateToRegistry(List<Pet> petReg)
+{
+	string inputAge = "";
+	string inputWeight = "";
+	string newPetTag = "";
+	string petName = "";
+	string petType = "";
+	double petAge = 0.0;
+	double petWeight = 0.0;
+	bool validFlag = false;
+	int petIndex = -1;
+
+	string petTag = GetTag();
+	petIndex = petReg.FindIndex(x => x.tag == petTag);
+	if (petIndex < 0)
+	{
+		Console.WriteLine($"\n\tNo pet with an id tag of {petTag} found on the registry\n");
+	}
+	else
+	{
+		Console.WriteLine($"\nEnter new value for data or press enter to keep current data\n");
+
+		Console.Write("Enter your pet's id tag:\t");
+		newPetTag = Console.ReadLine();
+		Console.Write("Enter your pet's name:\t");
+		petName = Console.ReadLine();
+		Console.Write("Enter your pet's type (Cat or Dog):\t");
+		petType = Console.ReadLine();
+		do
+		{
+			Console.Write("Enter your pet's age:\t");
+			inputAge = Console.ReadLine();
+			if (!string.IsNullOrWhiteSpace(inputAge))
+			{
+				if (double.TryParse(inputAge, out petAge))
+				{
+					validFlag = true;
+				}
+				else
+				{
+					Console.WriteLine("\nValue entered is not a number. Try Again.\n");
+				}
+			}
+			else
+			{
+				validFlag = true;
+			}
+		} while (!validFlag);
+		do
+		{
+			Console.Write("Enter your pet's weight (in kgs):\t");
+			inputWeight = Console.ReadLine();
+			if (!string.IsNullOrWhiteSpace(inputWeight))
+			{
+				if (double.TryParse(inputWeight, out petWeight))
+				{
+					validFlag = true;
+				}
+				else
+				{
+					Console.WriteLine("\nValue entered is not a number. Try Again.\n");
+				}
+			}
+			else
+			{
+				validFlag = true;
+			}
+		} while (!validFlag);
+
+		if (!string.IsNullOrWhiteSpace(newPetTag))
+		{
+			petReg[petIndex].tag = newPetTag;
+		}
+		if (!string.IsNullOrWhiteSpace(petName))
+		{
+			petReg[petIndex].name = petName;
+		}
+		if (!string.IsNullOrWhiteSpace(petType))
+		{
+			petReg[petIndex].type = petType;
+		}
+		if (!string.IsNullOrWhiteSpace(inputAge))
+		{
+			petReg[petIndex].age = petAge;
+		}
+		if (!string.IsNullOrWhiteSpace(inputWeight))
+		{
+			petReg[petIndex].weight = petWeight;
+		}
+		Console.WriteLine("\nYour new pet information is as follows:");
+		DisplayPetInformation(petReg[petIndex]);
+	}
+}
+
+void RemoveFromRegistry(List<Pet> petReg)
+{
+	string petTag = GetTag();
+	Pet aPet = null;
+	int petIndex = -1;
+	string confirm = "N";
+	petIndex = petReg.FindIndex(x => x.tag == petTag);
+	if (petIndex < 0)
+	{
+		Console.WriteLine($"\n\tNo pet with an id tag of {petTag} found on the registry\n");
+	}
+	else
+	{
+		Console.WriteLine("Verify pet information before removing from registry\n");
+		DisplayPetInformation(petReg[petIndex]);
+		Console.Write("Confirm removal of pet from registry. Confirm (Y or N (default))\t");
+		confirm = Console.ReadLine().ToUpper();
+		if (confirm.Equals("Y"))
+		{
+			petReg.RemoveAt(petIndex);
+			Console.WriteLine("\nPet information  was removed from registry\n");
+		}
+		else
+		{
+			Console.WriteLine("\nPet information  was not removed from registry\n");
+		}
+	}
+}
+
+void PartA()
+{
+	Pet myPet = null;
+	string inputValue = "";
+	bool Exit = false;
+	double dosage = 0;
+	Console.WriteLine("\n\n\tTesting Pet constructor with data:\n");
+	try
+	{
+		myPet = GetPetData();
+		Console.WriteLine("\n\nFollowing is your Pet information:");
+
+		DisplayPetInformation(myPet);
+			Console.Write("Continue with treatment? (Y/N): ");
+			inputValue = Console.ReadLine();
+			if (inputValue.ToUpper().Equals("Y"))
+			{
+				do
+				{
+					Console.WriteLine("Choose a treatment:");
+					Console.WriteLine("a) Pain Killer (carpofen)");
+					Console.WriteLine("b) Sedative (acepromazine)");
+					Console.WriteLine("c) Both Pain Killer and Sedative");
+					Console.WriteLine("x) Exit");
+					inputValue = Console.ReadLine();
+					switch(inputValue.ToUpper())
+					{
+						case "A":
+							{
+								dosage = myPet.Carprofen();
+								Console.WriteLine($"Your pet ({myPet.name}) requires {dosage:0.000} of carprofen.");
+								break;
+							}
+						case "B":
+							{
+								dosage = myPet.Acepromazine();
+								Console.WriteLine($"Your pet ({myPet.name}) requires {dosage:0.000} of acepromazine.");
+								break;
+							}
+						case "C":
+							{
+								dosage = myPet.Carprofen();
+								Console.WriteLine($"Your pet ({myPet.name}) requires {dosage:0.000)} of carprofen.");
+								dosage = myPet.Acepromazine();
+								Console.WriteLine($"Your pet ({myPet.name}) requires {dosage:0.000} of acepromazine.");
+								break;
+							}
+						case "X":
+							{
+								Exit=true;
+								break;
+							}
+						default:
+							{
+								Console.WriteLine("\nInvalid choose. Try Again");
+								break;
+							}
+					}
+				} while (!Exit);
+				   
+			}
+	}
+	catch (ArgumentNullException ex)
+	{
+		Console.WriteLine($"\n\tArgumentNullException Error: {ex.Message}");
+	}
+	catch (ArgumentException ex)
+	{
+		Console.WriteLine($"\n\tArgumentException Error: {ex.Message}");
+	}
+	catch (Exception ex)
+	{
+		Console.WriteLine($"\n\tAException Error: {ex.Message}");
+	}
+}
