@@ -1,7 +1,4 @@
-﻿using System;
-using System.Data.SqlTypes;
-using System.Collections.Generic;
-using PetsRLaw;
+﻿using PetsRLaw;
 
 Pet myPet = new();
 List<Pet> listOfPets = [];
