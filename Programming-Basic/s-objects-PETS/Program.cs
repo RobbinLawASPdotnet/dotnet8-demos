@@ -3,8 +3,8 @@ using System.Data.SqlTypes;
 using System.Collections.Generic;
 using PetsRLaw;
 
-Pet myPet = new Pet();
-List<Pet> listOfPets = new List<Pet>();
+Pet myPet = new();
+List<Pet> listOfPets = [];
 
 LoadFileValuesToMemory(listOfPets);
 
@@ -139,7 +139,7 @@ double PromptDoubleBetweenMinMax(String msg, double min, double max)
 Pet NewPet()
 {
 	//Console.WriteLine("Not Implemented Yet PartA");
-	Pet myPet = new Pet();
+	Pet myPet = new();
 	GetTag(myPet);
 	GetName(myPet);
 	GetAge(myPet);
@@ -237,7 +237,7 @@ void LoadFileValuesToMemory(List<Pet> listOfPets)
 				{
 					//Console.WriteLine($"itemIndex: {j}; item: {items[j]}");
 				}
-				Pet myPet = new Pet(items[0], items[1], double.Parse(items[2]), double.Parse(items[3]), items[4]);
+				Pet myPet = new(items[0], items[1], double.Parse(items[2]), double.Parse(items[3]), items[4]);
 				listOfPets.Add(myPet);
 			}
 			Console.WriteLine($"Load complete. {fileName} has {listOfPets.Count} data entries");
