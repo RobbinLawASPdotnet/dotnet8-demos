@@ -1,7 +1,10 @@
-﻿using PetsRLaw;
+﻿using System;
+using System.Data.SqlTypes;
+using System.Collections.Generic;
+using PetsRLaw;
 
-Pet myPet = new();
-List<Pet> listOfPets = [];
+Pet myPet = new Pet();
+List<Pet> listOfPets = new List<Pet>();
 
 LoadFileValuesToMemory(listOfPets);
 
@@ -136,7 +139,7 @@ double PromptDoubleBetweenMinMax(String msg, double min, double max)
 Pet NewPet()
 {
 	//Console.WriteLine("Not Implemented Yet PartA");
-	Pet myPet = new();
+	Pet myPet = new Pet();
 	GetTag(myPet);
 	GetName(myPet);
 	GetAge(myPet);
@@ -194,18 +197,30 @@ void GetType(Pet pet)
 void AddPetToList(Pet myPet, List<Pet> listOfPets)
 {
 	//Console.WriteLine("Not Implemented Yet PartB");
+	if(myPet == null)
+		throw new Exception($"No Pet provided to add to list");
 	listOfPets.Add(myPet);
+	Console.WriteLine($"Pet Added");
 }
 
 Pet FindPetInList(List<Pet> listOfPets)
 {
-	Console.WriteLine("Not Implemented Yet PartB");
-	return new Pet();
+	//Console.WriteLine("Not Implemented Yet PartB");
+	string myString = Prompt($"Enter Partial Pet Name: ");
+	foreach(Pet pet in listOfPets)
+		if(pet.Name.Contains(myString))
+			return pet;
+	Console.WriteLine($"No Pets Match");
+	return null;
 }
 
 void RemovePetFromList(Pet myPet, List<Pet> listOfPets)
 {
-	Console.WriteLine("Not Implemented Yet PartB");
+	//Console.WriteLine("Not Implemented Yet PartB");
+	if(myPet == null)
+		throw new Exception($"No Pet provided to remove from list");
+	listOfPets.Remove(myPet);
+	Console.WriteLine($"Pet Removed");
 }
 
 void DisplayAllPetsInList(List<Pet> listOfPets)
@@ -234,7 +249,7 @@ void LoadFileValuesToMemory(List<Pet> listOfPets)
 				{
 					//Console.WriteLine($"itemIndex: {j}; item: {items[j]}");
 				}
-				Pet myPet = new(items[0], items[1], double.Parse(items[2]), double.Parse(items[3]), items[4]);
+				Pet myPet = new Pet(items[0], items[1], double.Parse(items[2]), double.Parse(items[3]), items[4]);
 				listOfPets.Add(myPet);
 			}
 			Console.WriteLine($"Load complete. {fileName} has {listOfPets.Count} data entries");
